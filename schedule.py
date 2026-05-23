@@ -41,7 +41,12 @@ def linear_beta_schedule(T: int, beta_start: float = 1e-4, beta_end: float = 0.0
         - 注意 dtype，建议用 torch.float64 以提升数值精度
     """
     # >>> 在这里写你的代码（约 1 行） <<<
-    raise NotImplementedError("TODO 1: 实现 linear_beta_schedule")
+    # 法一：
+    # return torch.linspace(beta_start, beta_end, T, dtype=torch.float64)
+
+    # 法二：
+    betas  = torch.tensor([beta_start + (beta_end - beta_start) * t / (T - 1) for t in range(T)], dtype=torch.float64)
+    return betas
     # >>> 结束 <<<
 
 
@@ -69,7 +74,14 @@ def cosine_beta_schedule(T: int, s: float = 0.008) -> torch.Tensor:
         - 用 torch.clip 把 β 限制到 (1e-5, 0.999) 内防止数值问题
     """
     # >>> 在这里写你的代码（约 5-8 行） <<<
-    raise NotImplementedError("TODO 2 (挑战档): 实现 cosine_beta_schedule")
+    t = torch.arange(T, dtype=torch.float64)
+    alpha_bar = torch.cos(((t / T) + s) / (1 + s) * math.pi / 2) ** 2
+    alpha_bar = torch.clip(alpha_bar, 0, 1)
+    betas = torch.zeros(T, dtype=torch.float64)
+    betas[0] = 1 - alpha_bar[0] / 1.0
+    betas[1:] = 1 - (alpha_bar[1:] / alpha_bar[:-1])
+    betas = torch.clip(betas, 1e-5, 0.999)
+    return betas
     # >>> 结束 <<<
 
 
@@ -86,7 +98,7 @@ class DDPMSchedule(nn.Module):
         alphas_cumprod:          ᾱ_t,                shape (T,)
         alphas_cumprod_prev:     ᾱ_{t-1}, t≥1,       shape (T,)
         sqrt_alpha_bar:          √ᾱ_t,               shape (T,)
-        sqrt_one_minus_alpha_bar:√(1-ᾱ_t),          shape (T,)
+        sqrt_one_minus_alpha_bar:√(1-ᾱ_t),           shape (T,)
         sqrt_recip_alpha:        1/√α_t,             shape (T,)
         posterior_variance:      \tilde β_t,         shape (T,)
         posterior_log_variance:  log(\tilde β_t),    shape (T,) (clipped)

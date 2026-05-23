@@ -48,7 +48,7 @@ git clone https://github.com/Qi-StarterTrain/diffusion-models-starter-materials.
 
 ### 挑战档（加分项，+20 分）
 
-- [ ] 实现 cosine schedule
+- [x] 实现 cosine schedule
 - [ ] 在 CIFAR-10 上对比 linear/cosine 两种 schedule
 - [ ] 至少 3 个随机种子下报告 mean ± std
 - [ ] 提交 8 页技术报告，包含失败案例分析

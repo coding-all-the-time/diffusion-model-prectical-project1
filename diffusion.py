@@ -62,7 +62,10 @@ def q_sample(
         noise = torch.randn_like(x0)
 
     # >>> 在这里写你的代码（约 3-4 行） <<<
-    raise NotImplementedError("TODO 3: 实现 q_sample")
+    sqrt_alpha_bar = extract(schedule.sqrt_alpha_bar, t, x0.shape)
+    sqrt_one_minus_alpha_bar = extract(schedule.sqrt_one_minus_alpha_bar, t, x0.shape)
+    x_t = sqrt_alpha_bar * x0 + sqrt_one_minus_alpha_bar * noise
+    return x_t
     # >>> 结束 <<<
 
 
@@ -94,7 +97,11 @@ def p_losses(
         - 注意要把 noise 传给 q_sample 以保持 noise 与 loss 计算的一致性
     """
     # >>> 在这里写你的代码（约 4-6 行） <<<
-    raise NotImplementedError("TODO 4: 实现 p_losses")
+    noise = torch.randn_like(x0)
+    xt = q_sample(x0, t, schedule, noise)
+    pred_noise = model(xt, t)
+    loss = F.mse_loss(pred_noise, noise)
+    return loss
     # >>> 结束 <<<
 
 
@@ -155,7 +162,16 @@ def p_sample(
         - 注意 t=0 时**不加随机扰动**（最后一步无需采样）
     """
     # >>> 在这里写你的代码（约 8-12 行） <<<
-    raise NotImplementedError("TODO 5: 实现 p_sample")
+    sqrt_recip_alpha = extract(schedule.sqrt_recip_alpha, t, xt.shape)
+    betas = extract(schedule.betas, t, xt.shape)
+    sqrt_one_minus_alpha_bar = extract(schedule.sqrt_one_minus_alpha_bar, t, xt.shape)
+    pred_noise = model(xt, t)
+    mu = sqrt_recip_alpha * (xt - betas * pred_noise / sqrt_one_minus_alpha_bar)
+    posterior_variance = extract(schedule.posterior_variance, t, xt.shape)
+    noise = torch.randn_like(xt)
+    nonzero_mask = (t > 0).float().view(-1, *([1] * (len(xt.shape) - 1))) 
+    x_prev = mu + nonzero_mask * torch.sqrt(posterior_variance) * noise
+    return x_prev
     # >>> 结束 <<<
 
 
@@ -194,7 +210,16 @@ def p_sample_loop(
     T = schedule.T
 
     # >>> 在这里写你的代码（约 8-15 行） <<<
-    raise NotImplementedError("TODO 6: 实现 p_sample_loop")
+    x_t = torch.randn(shape, device=device)
+    intermediates = [x_t.cpu()] if return_intermediates else None
+    for t in reversed(range(T)):
+        t_tensor = torch.full((B,), t, device=device, dtype=torch.long)
+        x_t = p_sample(model, x_t, t_tensor, schedule)
+        if return_intermediates:
+            intermediates.append(x_t.cpu())
+    if return_intermediates:
+        return x_t, intermediates
+    return x_t
     # >>> 结束 <<<
 
 
@@ -253,7 +278,7 @@ if __name__ == '__main__':
         assert x_prev.shape == x_T.shape
         print("✅ p_sample passed")
 
-        samples = p_sample_loop(dummy_model, (2, 3, 8, 8), small_schedule, device)
+        samples, _ = p_sample_loop(dummy_model, (2, 3, 8, 8), small_schedule, device, True)
         assert samples.shape == (2, 3, 8, 8)
         print("✅ p_sample_loop passed")
     except NotImplementedError as e:
