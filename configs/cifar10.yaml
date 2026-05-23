@@ -1,0 +1,62 @@
+# CIFAR-10 DDPM Configuration（进阶档）
+# 期望训练时长: ~8h on RTX 3090, ~4h on A100
+# 期望结果: 200 epoch 后 FID ≤ 15 (5000 samples)
+#
+# 显存要求: 至少 16 GB（推荐 24 GB）。
+# 如果 OOM，把 batch_size 减半或开 fp16。
+
+output_dir: runs/exp_cifar10_baseline
+seed: 42
+
+# ─────────── 数据 ───────────
+dataset:
+  name: cifar10
+  batch_size: 128
+  image_size: 32
+  num_workers: 4
+  root: ./data
+
+# ─────────── 模型（标准 U-Net） ───────────
+model:
+  in_channels: 3
+  out_channels: 3
+  base_channels: 128         # CIFAR-10 标配
+  channel_mult: [1, 2, 2, 2] # 32 → 16 → 8 → 4 → 4
+  num_res_blocks: 2
+  attn_resolutions: [16]      # 16x16 加 self-attention
+  dropout: 0.1
+  image_size: 32
+
+# ─────────── Diffusion ───────────
+diffusion:
+  T: 1000
+  beta_schedule: linear       # 挑战档可改为 cosine
+  beta_start: 0.0001
+  beta_end: 0.02
+
+# ─────────── Optimizer ───────────
+optimizer:
+  lr: 2.0e-4
+  weight_decay: 0.0
+  warmup_steps: 5000
+
+# ─────────── EMA ───────────
+ema_decay: 0.9999
+
+# ─────────── 混合精度 ───────────
+mixed_precision: fp16        # CIFAR-10 训练建议开 fp16
+                             # 如果 NaN 频发，回退到 'no' 排查问题
+
+# ─────────── 训练循环 ───────────
+training:
+  num_epochs: 200
+  log_every: 100
+  sample_every: 2500
+  ckpt_every: 10000
+  grad_clip: 1.0
+
+# ─────────── WandB（强烈推荐） ───────────
+wandb:
+  enabled: false             # 长时间训练强烈建议开启 wandb 监控
+  project: ddpm-course
+  run_name: cifar10_linear_baseline
