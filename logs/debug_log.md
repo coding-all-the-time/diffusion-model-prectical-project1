@@ -158,3 +158,24 @@ if return_intermediates:
     return x_t, intermediates
 return x_t
 ```
+
+## embedding.py
+### TODO 7
+一遍过
+```python
+half = self.dim // 2
+freqs = torch.exp(-math.log(10000) * torch.arange(half, device=t.device) / half)
+args = t.float()[:, None] * freqs[None, :]
+emb = torch.cat([args.sin(), args.cos()], dim=-1)
+return emb
+```
+
+### TODO 8
+一遍过
+```python
+h = self.conv1(F.silu(self.norm1(x)))
+t_proj = self.time_mlp(F.silu(t_emb)).unsqueeze(-1).unsqueeze(-1)
+h = h + t_proj
+h = self.conv2(self.dropout(F.silu(self.norm2(h))))
+return h + self.skip(x)
+```

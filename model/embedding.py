@@ -58,7 +58,11 @@ class SinusoidalPosEmb(nn.Module):
             4. 拼接 cos 和 sin：torch.cat([args.sin(), args.cos()], dim=-1)
         """
         # >>> 在这里写你的代码（约 5-7 行） <<<
-        raise NotImplementedError("TODO 7: 实现 SinusoidalPosEmb.forward")
+        half = self.dim // 2
+        freqs = torch.exp(-math.log(10000) * torch.arange(half, device=t.device) / half)
+        args = t.float()[:, None] * freqs[None, :]
+        emb = torch.cat([args.sin(), args.cos()], dim=-1)
+        return emb
         # >>> 结束 <<<
 
 

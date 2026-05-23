@@ -34,7 +34,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .embedding import TimeEmbedding
+from embedding import TimeEmbedding
 
 
 # ============================================================================
@@ -90,7 +90,11 @@ class ResBlock(nn.Module):
             5. return h + skip(x)
         """
         # >>> 在这里写你的代码（约 5-7 行） <<<
-        raise NotImplementedError("TODO 8: 实现 ResBlock.forward 中的 time embedding 注入")
+        h = self.conv1(F.silu(self.norm1(x)))
+        t_proj = self.time_mlp(F.silu(t_emb)).unsqueeze(-1).unsqueeze(-1)
+        h = h + t_proj
+        h = self.conv2(self.dropout(F.silu(self.norm2(h))))
+        return h + self.skip(x)
         # >>> 结束 <<<
 
 
