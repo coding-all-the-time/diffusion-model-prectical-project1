@@ -34,7 +34,7 @@ git clone https://github.com/Qi-StarterTrain/diffusion-models-starter-materials.
 
 ### 基础档（必做，60 分）
 
-- [ ] 实现完整代码（按照下方"代码任务清单"）
+- [x] 实现完整代码（按照下方"代码任务清单"）
 - [ ] 在 MNIST 上训练 50 epoch
 - [ ] 能生成视觉可辨认的数字（手写数字应当大致清晰）
 - [ ] 提交训练曲线 + 64 张样本网格 + 实验日志
@@ -130,7 +130,7 @@ class ResBlock(nn.Module):
 │   ├── loss_curve.png          # 训练 loss 曲线
 │   ├── samples_final.png       # 64 张生成样本网格
 │   └── checkpoint_final.pt     # 模型权重（大文件请用 Git LFS）
-├── logs/exp_log.md             # 至少 1 份实验日志（按 experiment_log_template.md）
+├── logs/exp_log.md             # 至少 1 份实验日志（experiment_log_template.md）
 ├── report.md                   # 1-2 页报告
 └── debug_log.md                # 至少 3 条踩坑记录
 ```

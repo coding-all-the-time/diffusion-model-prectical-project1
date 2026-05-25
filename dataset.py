@@ -159,3 +159,41 @@ if __name__ == '__main__':
         print("✅ CIFAR-10 loader passed")
     except Exception as e:
         print(f"⚠️ CIFAR-10 loader: {e}")
+    print("=== 开始测试 dataset.py 数据范围 ===\n")
+    
+    # 容差值，用于处理浮点数计算时的微小舍入误差
+    TOLERANCE = 1e-4
+
+    # ---- 测试 MNIST ----
+    try:
+        print(">>> 测试 MNIST 数据加载器...")
+        loader_mnist = get_dataloader('mnist', batch_size=64, num_workers=0)
+        x_mnist = next(iter(loader_mnist))
+        
+        print(f"    输出形状: {x_mnist.shape}  # 预期 (64, 1, 28, 28)")
+        print(f"    数据范围: [{x_mnist.min():.4f}, {x_mnist.max():.4f}]")
+        
+        # 严谨的范围断言
+        assert x_mnist.min() >= -1.0 - TOLERANCE, f"错误: 最小值 {x_mnist.min()} 小于 -1"
+        assert x_mnist.max() <=  1.0 + TOLERANCE, f"错误: 最大值 {x_mnist.max()} 大于 1"
+        print("✅ MNIST 数据范围测试通过！\n")
+        
+    except Exception as e:
+        print(f"❌ MNIST 测试失败: {e}\n")
+
+    # ---- 测试 CIFAR-10 ----
+    try:
+        print(">>> 测试 CIFAR-10 数据加载器...")
+        loader_cifar = get_dataloader('cifar10', batch_size=64, num_workers=0)
+        x_cifar = next(iter(loader_cifar))
+        
+        print(f"    输出形状: {x_cifar.shape}  # 预期 (64, 3, 32, 32)")
+        print(f"    数据范围: [{x_cifar.min():.4f}, {x_cifar.max():.4f}]")
+        
+        # 严谨的范围断言
+        assert x_cifar.min() >= -1.0 - TOLERANCE, f"错误: 最小值 {x_cifar.min()} 小于 -1"
+        assert x_cifar.max() <=  1.0 + TOLERANCE, f"错误: 最大值 {x_cifar.max()} 大于 1"
+        print("✅ CIFAR-10 数据范围测试通过！\n")
+        
+    except Exception as e:
+        print(f"❌ CIFAR-10 测试失败: {e}\n")

@@ -74,12 +74,10 @@ def cosine_beta_schedule(T: int, s: float = 0.008) -> torch.Tensor:
         - 用 torch.clip 把 β 限制到 (1e-5, 0.999) 内防止数值问题
     """
     # >>> 在这里写你的代码（约 5-8 行） <<<
-    t = torch.arange(T, dtype=torch.float64)
-    alpha_bar = torch.cos(((t / T) + s) / (1 + s) * math.pi / 2) ** 2
-    alpha_bar = torch.clip(alpha_bar, 0, 1)
-    betas = torch.zeros(T, dtype=torch.float64)
-    betas[0] = 1 - alpha_bar[0] / 1.0
-    betas[1:] = 1 - (alpha_bar[1:] / alpha_bar[:-1])
+    t = torch.linspace(0, T, T + 1, dtype=torch.float64)
+    f_t = torch.cos(((t / T) + s) / (1 + s) * math.pi / 2) ** 2
+    alpha_bar = f_t / f_t[0]
+    betas = 1 - (alpha_bar[1:] / alpha_bar[:-1])
     betas = torch.clip(betas, 1e-5, 0.999)
     return betas
     # >>> 结束 <<<

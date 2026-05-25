@@ -29,6 +29,7 @@ import yaml
 from torch.cuda.amp import autocast, GradScaler
 from torch.utils.data import DataLoader
 import torchvision.utils as vutils
+import matplotlib.pyplot as plt
 
 from schedule import DDPMSchedule
 from diffusion import p_losses, p_sample_loop
@@ -57,13 +58,16 @@ class EMA:
         self.decay = decay
         # 用 deepcopy 而非 state_dict，确保 buffer 也被复制
         self.ema_model = copy.deepcopy(model)
+
+        # EMA 模型本身不参与梯度计算，因此关闭所有参数的梯度以节省显存和计算量
         for p in self.ema_model.parameters():
             p.requires_grad_(False)
 
-    @torch.no_grad()
+    @torch.no_grad()# 更新过程不需要计算图
     def update(self, model: nn.Module):
         for ema_p, p in zip(self.ema_model.parameters(), model.parameters()):
             ema_p.mul_(self.decay).add_(p.data, alpha=1 - self.decay)
+            # 下划线结尾的方法（如 mul_ 和 add_）代表内联操作，即它们会直接修改当前张量内存里的值，而不需要开辟新的内存空间。
         # buffer（如 batchnorm running stats）直接复制
         for ema_b, b in zip(self.ema_model.buffers(), model.buffers()):
             ema_b.copy_(b)
@@ -93,7 +97,7 @@ def train(cfg: Dict[str, Any]):
         torch.cuda.manual_seed_all(seed)
 
     # 保存配置
-    with open(output_dir / 'config.yaml', 'w') as f:
+    with open(output_dir / 'config.yaml', 'w', encoding='utf-8') as f:
         yaml.dump(cfg, f)
 
     # ─────────── 数据 ───────────
@@ -158,6 +162,15 @@ def train(cfg: Dict[str, Any]):
     ckpt_every = cfg['training'].get('ckpt_every', 5000)
     grad_clip = cfg['training'].get('grad_clip', 1.0)
 
+    # ─────────── 绘图记录初始化 ───────────
+    use_plotting = cfg.get('plotting', {}).get('enabled', False)
+    if use_plotting:
+        record_every = cfg['plotting'].get('record_every', 50)
+        plot_every = cfg['plotting'].get('plot_every', 1000)
+        history_steps = []
+        history_losses = []
+        history_mems = []
+
     global_step = 0
     start_time = time.time()
     print(f"[train] Starting training for {num_epochs} epochs")
@@ -196,6 +209,16 @@ def train(cfg: Dict[str, Any]):
 
             global_step += 1
 
+            # ─────────── 记录绘图数据 ───────────
+            if use_plotting and global_step % record_every == 0:
+                history_steps.append(global_step)
+                history_losses.append(loss.item())
+                if torch.cuda.is_available():
+                    mem_gb = torch.cuda.memory_allocated(device) / (1024 ** 3)
+                else:
+                    mem_gb = 0.0
+                history_mems.append(mem_gb)
+
             # ─────────── Logging ───────────
             if global_step % log_every == 0:
                 elapsed = time.time() - start_time
@@ -233,6 +256,30 @@ def train(cfg: Dict[str, Any]):
                     wandb.log({'samples': wandb.Image(grid)}, step=global_step)
                 sample_model.train()
 
+            # ─────────── 绘制并保存曲线 ───────────
+            if use_plotting and global_step % plot_every == 0 and len(history_steps) > 0:
+                fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+                
+                # 绘制Loss曲线
+                ax1.plot(history_steps, history_losses, label='Loss', color='blue')
+                ax1.set_title('Training Loss Curve')
+                ax1.set_xlabel('Global Step')
+                ax1.set_ylabel('Loss')
+                ax1.grid(True)
+                
+                # 绘制显存曲线
+                ax2.plot(history_steps, history_mems, label='VRAM (GB)', color='red')
+                ax2.set_title('GPU Memory Usage Curve')
+                ax2.set_xlabel('Global Step')
+                ax2.set_ylabel('Memory (GB)')
+                ax2.grid(True)
+                
+                plt.tight_layout()
+                plot_path = output_dir / 'training_curves.png'
+                plt.savefig(plot_path)
+                plt.close()
+                print(f"  [plot] curves saved to {plot_path}")
+
             # ─────────── Checkpoint ───────────
             if global_step % ckpt_every == 0:
                 ckpt_path = output_dir / 'ckpt' / f'step_{global_step:06d}.pt'
@@ -263,6 +310,32 @@ def train(cfg: Dict[str, Any]):
     print(f"\n[done] Final checkpoint saved to {final_ckpt}")
     print(f"[done] Total training time: {(time.time() - start_time)/60:.1f} min")
 
+    # 打印显存峰值统计 (除以 1024^3 将 Byte 转换为 GB)
+    if torch.cuda.is_available():
+        peak_memory = torch.cuda.max_memory_allocated(device) / (1024 ** 3)
+        print(f"[done] Peak GPU memory usage: {peak_memory:.2f} GB")
+
+    # ─────────── 训练结束时保存最终曲线（新增） ───────────
+    if use_plotting and len(history_steps) > 0:
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5))
+        ax1.plot(history_steps, history_losses, label='Loss', color='blue')
+        ax1.set_title('Final Training Loss Curve')
+        ax1.set_xlabel('Global Step')
+        ax1.set_ylabel('Loss')
+        ax1.grid(True)
+
+        ax2.plot(history_steps, history_mems, label='VRAM (GB)', color='red')
+        ax2.set_title('Final GPU Memory Usage Curve')
+        ax2.set_xlabel('Global Step')
+        ax2.set_ylabel('Memory (GB)')
+        ax2.grid(True)
+
+        plt.tight_layout()
+        plot_path = output_dir / 'training_curves_final.png'
+        plt.savefig(plot_path)
+        plt.close()
+        print(f"[plot] Final curves saved to {plot_path}")
+    
     if use_wandb:
         wandb.finish()
 
@@ -278,7 +351,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    with open(args.config, 'r') as f:
+    with open(args.config, 'r', encoding='utf-8') as f:
         cfg = yaml.safe_load(f)
 
     if args.output_dir:

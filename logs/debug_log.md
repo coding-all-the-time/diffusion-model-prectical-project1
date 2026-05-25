@@ -31,29 +31,12 @@ return betas
 ```
 
 ### TODO 2
+一遍过
 ```python
-t = torch.arange(T, dtype=torch.float64)
-alpha_bar = torch.cos(((t / T) + s) / (1 + s) * math.pi / 2) ** 2
-alpha_bar = torch.clip(alpha_bar, 0, 1)
+t = torch.linspace(0, T, T + 1, dtype=torch.float64)
+f_t = torch.cos(((t / T) + s) / (1 + s) * math.pi / 2) ** 2
+alpha_bar = f_t / f_t[0]
 betas = 1 - (alpha_bar[1:] / alpha_bar[:-1])
-betas = torch.clip(betas, 1e-5, 0.999)
-return betas
-```
-报错:
-```bash
-Traceback (most recent call last):
-  File "d:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\schedule.py", line 217, in <module>
-    assert betas_cos.shape == (1000,)
-AssertionError
-```
-> 原因：beta的个数不等于1000，第四行得出的betas只有T - 1个，缺少alpha_bar[0]的情况
-```python
-t = torch.arange(T, dtype=torch.float64)
-alpha_bar = torch.cos(((t / T) + s) / (1 + s) * math.pi / 2) ** 2
-alpha_bar = torch.clip(alpha_bar, 0, 1)
-betas = torch.zeros(T, dtype=torch.float64)
-betas[0] = 1 - alpha_bar[0] / 1.0
-betas[1:] = 1 - (alpha_bar[1:] / alpha_bar[:-1])
 betas = torch.clip(betas, 1e-5, 0.999)
 return betas
 ```
@@ -178,4 +161,102 @@ t_proj = self.time_mlp(F.silu(t_emb)).unsqueeze(-1).unsqueeze(-1)
 h = h + t_proj
 h = self.conv2(self.dropout(F.silu(self.norm2(h))))
 return h + self.skip(x)
+```
+
+## train.py
+
+### 1、读取文件
+报错:
+```bash
+UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 34: illegal multibyte sequence
+```
+> 原因：Windows 系统在使用 Python 的 open() 函数读取文件时，默认采用的是 GBK 编码。但是，configs/mnist.yaml 文件是以 UTF-8 格式保存的，因为里面包含了中文注释。用 GBK 去强行解码 UTF-8 的文件，就会报这个错。
+
+解决方法：在打开和保存文件位置加上encoding='utf-8'
+```python
+with open(args.config, 'r', encoding='utf-8') as f:
+    cfg = yaml.safe_load(f)
+```
+```python
+# 保存配置
+with open(output_dir / 'config.yaml', 'w', encoding='utf-8') as f:
+    yaml.dump(cfg, f)
+```
+
+### 2、GPU配置
+没有找到GPU：
+```bash
+D:\Anaconda\lib\site-packages\torch\amp\autocast_mode.py:198: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn('User provided device_type of \'cuda\', but CUDA is not available. Disabling')
+```
+排查错误：
+```bash
+PS D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1> nvidia-smi
+Sun May 24 16:49:22 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 546.30                 Driver Version: 546.30       CUDA Version: 12.3     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                     TCC/WDDM  | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  NVIDIA GeForce RTX 3060 ...  WDDM  | 00000000:01:00.0 Off |                  N/A |
+| N/A   51C    P3              20W /  50W |      0MiB /  6144MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+PS D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1> python
+Python 3.9.13 (main, Aug 25 2022, 23:51:50) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+
+Warning:
+This Python interpreter is in a conda environment, but the environment has
+not been activated.  Libraries may fail to load.  To activate this environment
+please see https://conda.io/activation
+
+Type "help", "copyright", "credits" or "license" for more information.
+Ctrl click to launch VS Code Native REPL
+>>> import torch
+>>> print(torch.cuda.is_available())
+False
+```
+原因是：This Python interpreter is in a conda environment, but the environment has not been activated.（Conda 环境未激活）
+#### 第一步：修复并激活conda环境：
+```bash
+conda init powershell
+```
+`ctrl`+`~`重新打开终端，报错：
+```bash
+. : 无法加载文件 C:\Users\HZQ\Documents\WindowsPowerShell\profile.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:/go.microsoft.com/fwl
+ink/?LinkID=135170 中的 about_Execution_Policies。
+所在位置 行:1 字符: 3
++ . 'C:\Users\HZQ\Documents\WindowsPowerShell\profile.ps1'
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) []，PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+```
+> 原因：运行 conda init powershell 时，Conda 修改了 PowerShell 配置文件（profile.ps1），以便每次打开终端时自动激活 Conda 环境。但是，由于 Windows 的安全策略拦截了这个脚本的运行，导致 Conda 无法成功挂载，环境无法激活，没看到 (base) 前缀。
+
+修改执行策略为RemoteSigned：
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+重启终端生效，若要恢复执行策略，则运行：
+```bash
+Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope CurrentUser
+```
+
+#### 第二步：安装适配的PyTorch版本
+```bash
+pip uninstall torch torchvision torchaudio -y
+```
+安装 CUDA 12.1 版本的 PyTorch
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```

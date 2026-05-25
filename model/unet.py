@@ -34,7 +34,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from embedding import TimeEmbedding
+from .embedding import TimeEmbedding
 
 
 # ============================================================================
