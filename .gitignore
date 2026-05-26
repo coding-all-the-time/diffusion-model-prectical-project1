@@ -5,4 +5,4 @@ runs/
 data/
 
 # prompt.txt
-*.txt
+/*.txt

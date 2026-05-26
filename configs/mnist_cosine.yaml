@@ -1,0 +1,65 @@
+# MNIST DDPM Configuration（基础档）
+# 期望训练时长: ~30 min on RTX 3060, ~10 min on RTX 3090
+# 期望结果: 50 epoch 后能生成清晰可辨认的手写数字
+
+output_dir: runs/exp_mnist_cosine
+seed: 42
+
+# ─────────── 数据 ───────────
+dataset:
+  name: mnist
+  batch_size: 128
+  image_size: 32          # 28x28 padding 到 32x32 便于 stride-2 下采样
+  num_workers: 4
+  root: ./data
+
+# ─────────── 模型（小型 U-Net） ───────────
+model:
+  in_channels: 1
+  out_channels: 1
+  base_channels: 64
+  channel_mult: [1, 2, 2]    # 32 → 16 → 8 → 8
+  num_res_blocks: 2
+  attn_resolutions: [16]      # 在 16x16 分辨率加 self-attention
+  dropout: 0.1
+  image_size: 32
+
+# ─────────── Diffusion ───────────
+diffusion:
+  T: 1000
+  beta_schedule: cosine
+  beta_start: 0.0001
+  beta_end: 0.02
+
+# ─────────── Optimizer ───────────
+optimizer:
+  lr: 2.0e-4
+  weight_decay: 0.0
+  warmup_steps: 1000
+
+# ─────────── EMA ───────────
+ema_decay: 0.999
+
+# ─────────── 混合精度（可选） ───────────
+mixed_precision: fp16       # 选项: 'no', 'fp16', 'bf16'
+                          # 第一次跑用 'no'，确认正常后再开
+
+# ─────────── 训练循环 ───────────
+training:
+  num_epochs: 50
+  log_every: 50             # 每 N 步打印一次 loss
+  sample_every: 1000        # 每 N 步采样并保存可视化
+  ckpt_every: 5000          # 每 N 步保存 checkpoint
+  grad_clip: 1.0
+
+# ─────────── WandB（可选） ───────────
+wandb:
+  enabled: true            # 想用 wandb 改成 true
+  project: ddpm-course
+  run_name: mnist_cosine
+
+# ─────────── 绘图（可选） ───────────
+plotting:
+  enabled: true             # 是否启用 matplotlib 本地绘图
+  record_every: 50          # 每 N 步记录一次数据（与 log_every 一致）
+  plot_every: 1000          # 每 N 步更新并保存一次曲线图（与 sample_every 一致）

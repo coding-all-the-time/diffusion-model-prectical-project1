@@ -10,7 +10,7 @@ DDPM 训练脚本
 - Checkpoint 保存与恢复
 
 用法：
-    python train.py --config configs/mnist.yaml
+    python train.py --config configs/mnist2.yaml
 
 学生不需要修改本文件即可运行，但建议读懂训练循环结构。
 """
@@ -214,7 +214,8 @@ def train(cfg: Dict[str, Any]):
                 history_steps.append(global_step)
                 history_losses.append(loss.item())
                 if torch.cuda.is_available():
-                    mem_gb = torch.cuda.memory_allocated(device) / (1024 ** 3)
+                    # mem_gb = torch.cuda.memory_allocated(device) / (1024 ** 3)
+                    mem_gb = torch.cuda.memory_reserved(device) / (1024 ** 3)
                 else:
                     mem_gb = 0.0
                 history_mems.append(mem_gb)
@@ -312,7 +313,8 @@ def train(cfg: Dict[str, Any]):
 
     # 打印显存峰值统计 (除以 1024^3 将 Byte 转换为 GB)
     if torch.cuda.is_available():
-        peak_memory = torch.cuda.max_memory_allocated(device) / (1024 ** 3)
+        # peak_memory = torch.cuda.max_memory_allocated(device) / (1024 ** 3)
+        peak_memory = torch.cuda.max_memory_reserved(device) / (1024 ** 3)
         print(f"[done] Peak GPU memory usage: {peak_memory:.2f} GB")
 
     # ─────────── 训练结束时保存最终曲线（新增） ───────────
