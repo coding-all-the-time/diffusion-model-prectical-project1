@@ -1,0 +1,24 @@
+2026-05-26 10:51:48,852 INFO    MainThread:12332 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-05-26 10:51:48,852 INFO    MainThread:12332 [wandb_setup.py:_flush():81] Configure stats pid to 12332
+2026-05-26 10:51:48,852 INFO    MainThread:12332 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-26 10:51:48,854 INFO    MainThread:12332 [wandb_init.py:setup_run_log_directory():723] Logging user logs to D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\wandb\run-20260526_105148-t5x7nibf\logs\debug.log
+2026-05-26 10:51:48,854 INFO    MainThread:12332 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\wandb\run-20260526_105148-t5x7nibf\logs\debug-internal.log
+2026-05-26 10:51:48,854 INFO    MainThread:12332 [wandb_init.py:init():850] calling init triggers
+2026-05-26 10:51:48,854 INFO    MainThread:12332 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'output_dir': 'runs/exp_mnist_cosine', 'seed': 42, 'dataset': {'name': 'mnist', 'batch_size': 128, 'image_size': 32, 'num_workers': 4, 'root': './data'}, 'model': {'in_channels': 1, 'out_channels': 1, 'base_channels': 64, 'channel_mult': [1, 2, 2], 'num_res_blocks': 2, 'attn_resolutions': [16], 'dropout': 0.1, 'image_size': 32}, 'diffusion': {'T': 1000, 'beta_schedule': 'cosine', 's': 0.008}, 'optimizer': {'lr': 0.0002, 'weight_decay': 0.0, 'warmup_steps': 1000}, 'ema_decay': 0.999, 'mixed_precision': 'fp16', 'training': {'num_epochs': 50, 'log_every': 50, 'sample_every': 1000, 'ckpt_every': 5000, 'grad_clip': 1.0}, 'wandb': {'enabled': True, 'project': 'ddpm-course', 'run_name': 'mnist_cosine'}, 'plotting': {'enabled': True, 'record_every': 50, 'plot_every': 1000}, '_wandb': {}}
+2026-05-26 10:51:48,854 INFO    MainThread:12332 [wandb_init.py:init():898] starting backend
+2026-05-26 10:51:49,559 INFO    MainThread:12332 [wandb_init.py:init():913] sending inform_init request
+2026-05-26 10:51:50,303 INFO    MainThread:12332 [wandb_init.py:init():918] backend started and connected
+2026-05-26 10:51:50,310 INFO    MainThread:12332 [wandb_init.py:init():988] updated telemetry
+2026-05-26 10:51:50,374 INFO    MainThread:12332 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-05-26 10:51:50,856 INFO    MainThread:12332 [wandb_init.py:init():1056] starting run threads in backend
+2026-05-26 10:51:51,165 INFO    MainThread:12332 [wandb_run.py:_console_start():2554] atexit reg
+2026-05-26 10:51:51,165 INFO    MainThread:12332 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-05-26 10:51:51,166 INFO    MainThread:12332 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-05-26 10:51:51,166 INFO    MainThread:12332 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-05-26 10:51:51,169 INFO    MainThread:12332 [wandb_init.py:init():1094] run started, returning control to user process
+2026-05-26 14:05:43,000 INFO    MainThread:12332 [wandb_run.py:_finish():2321] finishing run worldexplorer111111-tsinghua-university/ddpm-course/t5x7nibf
+2026-05-26 14:05:43,002 INFO    MainThread:12332 [wandb_run.py:_atexit_cleanup():2520] got exitcode: 0
+2026-05-26 14:05:43,004 INFO    MainThread:12332 [wandb_run.py:_restore():2502] restore
+2026-05-26 14:05:43,005 INFO    MainThread:12332 [wandb_run.py:_restore():2508] restore done
+2026-05-26 14:05:45,076 INFO    MainThread:12332 [wandb_run.py:_footer_sync_info():3889] logging synced files

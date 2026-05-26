@@ -11,7 +11,8 @@ DDPM 训练脚本
 
 用法：
     python train.py --config configs/mnist2.yaml
-
+重新启动：
+    python train.py --config configs/mnist_cosine.yaml --resume runs/exp_mnist_cosine/ckpt/step_015000.pt
 学生不需要修改本文件即可运行，但建议读懂训练循环结构。
 """
 
@@ -26,7 +27,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import yaml
-from torch.cuda.amp import autocast, GradScaler
+# from torch.cuda.amp import autocast, GradScaler
 from torch.utils.data import DataLoader
 import torchvision.utils as vutils
 import matplotlib.pyplot as plt
@@ -143,7 +144,7 @@ def train(cfg: Dict[str, Any]):
     # ─────────── 混合精度 ───────────
     use_amp = cfg.get('mixed_precision', 'no') in ['fp16', 'bf16']
     amp_dtype = torch.bfloat16 if cfg.get('mixed_precision') == 'bf16' else torch.float16
-    scaler = GradScaler(enabled=(use_amp and amp_dtype == torch.float16))
+    scaler = torch.amp.GradScaler(enabled=(use_amp and amp_dtype == torch.float16), device='cuda')
 
     # ─────────── WandB（可选） ───────────
     use_wandb = cfg.get('wandb', {}).get('enabled', False)
@@ -172,10 +173,30 @@ def train(cfg: Dict[str, Any]):
         history_mems = []
 
     global_step = 0
+    start_epoch = 0
+    
+    # ─────────── 恢复断点 (Resume) ───────────
+    if cfg.get('resume'):
+        print(f"[*] Resuming from checkpoint: {cfg['resume']}")
+        ckpt = torch.load(cfg['resume'], map_location=device, weights_only=False)
+        model.load_state_dict(ckpt['model'])
+        optimizer.load_state_dict(ckpt['optimizer'])
+        if ema is not None and 'ema' in ckpt:
+            ema.load_state_dict(ckpt['ema'])
+        if use_amp and amp_dtype == torch.float16 and 'scaler' in ckpt:
+            scaler.load_state_dict(ckpt['scaler'])
+            
+        global_step = ckpt.get('global_step', 0)
+        start_epoch = ckpt.get('epoch', 0) + 1  # 从中断的下一个 epoch 继续
+        
+        # 修复学习率调度器（避免恢复后由于内部 step 归零导致学习率重新 warmup 到 0）
+        if scheduler_lr is not None:
+            scheduler_lr.last_epoch = global_step
+
     start_time = time.time()
     print(f"[train] Starting training for {num_epochs} epochs")
 
-    for epoch in range(num_epochs):
+    for epoch in range(start_epoch, num_epochs):
         for batch_idx, x0 in enumerate(loader):
             x0 = x0.to(device, non_blocking=True)
             B = x0.shape[0]
@@ -185,7 +206,7 @@ def train(cfg: Dict[str, Any]):
 
             # Forward + Loss
             optimizer.zero_grad(set_to_none=True)
-            with autocast(enabled=use_amp, dtype=amp_dtype):
+            with torch.amp.autocast(enabled=use_amp, dtype=amp_dtype, device_type='cuda'):
                 loss = p_losses(model, x0, t, schedule)
 
             # Backward
@@ -360,6 +381,8 @@ def main():
         cfg['output_dir'] = args.output_dir
     if args.seed is not None:
         cfg['seed'] = args.seed
+    if args.resume is not None:
+        cfg['resume'] = args.resume
 
     print("=" * 60)
     print("DDPM Training")

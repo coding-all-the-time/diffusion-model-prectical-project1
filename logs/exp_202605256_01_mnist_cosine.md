@@ -20,7 +20,7 @@
 | 硬件 | NVIDIA GeForce RTX 3060 6GB × 1 |
 | 框架版本 | PyTorch 2.3.0, CUDA 12.1 |
 | 仓库 | github.com/coding-all-the-time/diffusion-model-prectical-project1 |
-| Git commit | ``|
+| Git commit | `17f6ba4`|
 | Git 分支 | `origin/main` |
 
 ---
@@ -71,9 +71,10 @@ model:
 # ─────────── Diffusion ───────────
 diffusion:
   T: 1000
-  beta_schedule: linear
-  beta_start: 0.0001
-  beta_end: 0.02
+  beta_schedule: cosine
+  # beta_start: 0.0001
+  # beta_end: 0.02
+  s: 0.008
 
 # ─────────── Optimizer ───────────
 optimizer:
@@ -125,17 +126,17 @@ python train.py --config configs/mnist_cosine.yaml
 
 | 指标 | 数值 | 备注 |
 |------|------|------|
-| 训练总时长 | 98.6 min |3.95 steps/s |
-| 显存峰值 | 3.54 GB | |
-| 最终训练 loss | 0.0145 | |
-| FID @ EMA| 2.8824 | 5000 张样本 |
-| FID @ no EMA| 5.3107 | 5000 张样本 |
+| 训练总时长 | 193.9 min |2.01183 steps/s, 训练中断 |
+| 显存峰值 | 4.04 GB | |
+| 最终训练 loss | 0.02514 | |
+| FID @ EMA| 2.9506 | 5000 张样本 |
+| FID @ no EMA| 7.4592 | 5000 张样本 |
 
 ### 5.2 可视化结果
 
-`wandb/run-20260525_190443-v11lkmr3`
+`wandb/run-20260526_105148-t5x7nibf`
 
-[https://wandb.ai/worldexplorer111111-tsinghua-university/ddpm-course/runs/v11lkmr3](https://wandb.ai/worldexplorer111111-tsinghua-university/ddpm-course/runs/v11lkmr3)
+[wandb.ai/worldexplorer111111-tsinghua-university/ddpm-course/runs/t5x7nibf](https://wandb.ai/worldexplorer111111-tsinghua-university/ddpm-course/runs/t5x7nibf)
 
 （注册时以为能改，选了清华，后面发现改不了了...）
 
@@ -143,27 +144,37 @@ python train.py --config configs/mnist_cosine.yaml
 
 | 配置 | FID(ema/no_ema) | 训练时长 | 备注 |
 |------|-----|----------|------|
-| ema_decay: 0.9999 (baseline) | 52.8770/5.0223 | 164 min | exp_20260524_01 |
-| ema_decay: 0.999 (本次) | 2.8824/5.3107 | 98.6 min |exp_20260525_01 |
-
+| linear schedule/ema_decay: 0.9999 (baseline) | 52.8770/5.0223 | 164 min | exp_20260524_01 |
+| linear schedule/ema_decay: 0.999 (baseline_2) | 2.8824/5.3107 | 98.6 min |exp_20260525_01 |
+| cosine schedule/ema_decay: 0.999 (本次) | 2.9506/7.4592 | 193.9 min(训练中断) |exp_20260526_01 |
 ---
 
 ## 6. 结论
 
 ### 6.1 假设是否成立
 
-✅ 假设成立
+🟡 部分成立
 
 **简短说明**：
-1. 手写数字的分布非常清晰，第一次训练到后期才出现手写数字，而本次在前期就显现，且 FID 分数从 52.877 降到 2.8824
-2. 使用fp16后，训练时间从 164 min 提高到 98.6 min ，提高约 40 %，且显存峰值降低
-3. 使用 EMA 比不使用 EMA 的 FID 提高 2.4283，符合预期
+1. Cosine schedule 带 EMA 的 FID (2.9506) 与上一版 Linear (2.8824) 基本持平，肉眼观察采样结果也相似，说明在 MNIST 这种简单数据集上，两种 schedule 的上限都很高。
+2. 不带 EMA 的采样结果中，63 张里出现了一张笔画不清晰和一张纯白色样本，且 FID 升至 7.4592（差于 Linear 的 5.3107）。这表明模型对 Cosine 调度的噪声分布适应得不如 Linear 稳定，可能目前的恒定学习率（2.0e-4）对 Cosine 来说并非最优。
+3. 由于遭遇断电导致硬件降频（降至 2.01 steps/s），本次训练耗时达 193.9 分钟，未能与上一版（98.6 分钟）形成公平对比，但显存峰值（4.04 GB）保持在合理范围内。
 
 ### 6.2 现象记录
 
 观察到但与预期无关的现象：
 
-- 
+- 警告：
+```bash
+FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+```
+PyTorch 的自动混合精度（AMP，用于加速模型训练并节省显存）主要是专门为 NVIDA 显卡（CUDA）设计的。随着 PyTorch 的发展，AMP 开始支持更多的硬件设备（比如 CPU，或者苹果的 MPS）。为了统一接口，PyTorch 官方把这个功能移到了更通用的 torch.amp 模块下。在使用时需要明确告诉它你要加速的是哪种设备（比如传入 'cuda' 或 'cpu'）。
+修改训练代码为：
+```python
+with torch.amp.autocast(enabled=use_amp, dtype=amp_dtype, device_type='cuda'):
+
+scaler = torch.amp.GradScaler(enabled=(use_amp and amp_dtype == torch.float16), device='cuda')
+```
 
 ---
 
@@ -171,13 +182,72 @@ python train.py --config configs/mnist_cosine.yaml
 
 > 没有遇到任何问题是不正常的。仔细回想是否有任何"花了 5 分钟以上才解决的事情"。
 
+### 坑 1：参数错误
+```bash
+TypeError: cosine_beta_schedule() got an unexpected keyword argument 'beta_start'
+```
+- **现象**：运行训练脚本后，如上报错
+- **猜测原因**：Linear schedule 依赖 start 和 end 值进行线性插值，但 Cosine schedule 的数学定义仅依赖总步数 $T$ 和偏移量 $s$。代码在构建 diffusion 过程时，没有针对 cosine 做参数隔离，把 config 里的 `beta_start` 等参数强制传给了不支持这些参数的函数。
+- **验证过程**：在配置文件中将 beta_start 和 beta_end 改为 s，问题消失
+- **最终方法**：修改配置文件
+- **耗时**：约 5 分钟
+- **教训**：修改配置时，必须要检查配置文件中的参数是否变化
+
+### 坑 2：训练意外中断
+
+- **现象**：在教室跑实验，电源被阿姨拔掉，电脑没电关机导致训练在第 16600 步中断，插电唤醒后，系统休眠机制保住了当前进程，让训练以 1.8 steps/s 的降频速度苟延残喘(随着电量提高，速度也慢慢提高，应该是电脑自动进入省电模式)
+- **猜测原因**：检查代码后，发现虽然在配置 parse_args() 中定义了 --resume 接收路径字符串，但 train() 函数里没有写加载权重字典 .pt 文件的闭环逻辑，导致该参数没有作用
+- **验证过程**：查阅 train() 源码约第 151 行处，发现变量定义为硬编码的 global_step = 0，并且循环固定为 for epoch in range(num_epochs):，完全没有针对断点状态的反向解析和变量覆盖
+- **最终方法**：使这次训练先跑完，为了彻底解决未来可能的降频问题和安全隐患，将恢复逻辑补全到代码中并在下一次训练进行验证。具体修改如下：
+1. 在 main() 函数底部，将命令行的 resume 路径写进配置：
+```python
+if args.resume is not None:
+    cfg['resume'] = args.resume
+```
+2. 在 train() 函数中替换掉原本写死的起始变量，并加载各个组件的状态字典：
+```python
+    global_step = 0
+    start_epoch = 0
+
+    # ─────────── 修复：新增完整的断点恢复逻辑 ───────────
+    if cfg.get('resume'):
+        print(f"[*] Resuming from checkpoint: {cfg['resume']}")
+        ckpt = torch.load(cfg['resume'], map_location=device, weights_only=False)
+
+        # 恢复模型与优化器
+        model.load_state_dict(ckpt['model'])
+        optimizer.load_state_dict(ckpt['optimizer'])
+
+        # 恢复 EMA 和 混合精度 Scaler
+        if ema is not None and 'ema' in ckpt:
+            ema.load_state_dict(ckpt['ema'])
+        if use_amp and amp_dtype == torch.float16 and 'scaler' in ckpt:
+            scaler.load_state_dict(ckpt['scaler'])
+
+        # 恢复训练步数状态
+        global_step = ckpt.get('global_step', 0)
+        start_epoch = ckpt.get('epoch', 0) + 1  
+
+        # 防止学习率调度器内部 step 归零导致重新 warmup
+        if scheduler_lr is not None:
+            scheduler_lr.last_epoch = global_step
+
+    start_time = time.time()
+    print(f"[train] Starting training from epoch {start_epoch} to {num_epochs}")
+
+    # 修复：将固定的 0 替换为 start_epoch
+    for epoch in range(start_epoch, num_epochs):
+```
+- **耗时**：约 30 分钟
+- **教训**：跑长耗时的实验前，不能想当然地以为代码里留了接口就等于实现了功能。务必 review 一遍模型权重、优化器和各种调度器的 Checkpoint 保存与加载闭环逻辑是否严密，防患于未然
+
 ---
 
 ## 8. 下一步计划
 
 > 基于本次结果，下一个实验应该做什么？写得越具体越好。
 
-- [ ] 对比linear/cosine 两种 schedule
+- [ ] 使用本次实验新编写的 checkpoint resume 逻辑，人为中断并恢复一次短训练，确保模型权重、优化器、EMA 和混合精度 Scaler 均能无缝衔接。
 
 ---
 
@@ -185,6 +255,6 @@ python train.py --config configs/mnist_cosine.yaml
 
 > 一句话总结这次实验最值得记住的事情。
 
-*看清原理*
+*以后训练记得加断点恢复*
 
 ---
