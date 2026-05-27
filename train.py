@@ -10,9 +10,9 @@ DDPM 训练脚本
 - Checkpoint 保存与恢复
 
 用法：
-    python train.py --config configs/mnist2.yaml
+    python train.py --config configs/mnist_cosine.yaml
 重新启动：
-    python train.py --config configs/mnist_cosine.yaml --resume runs/exp_mnist_cosine/ckpt/step_015000.pt
+    python train.py --config configs/mnist_cosine.yaml --resume runs/exp_mnist_cosine/ckpt/step_005000.pt
 学生不需要修改本文件即可运行，但建议读懂训练循环结构。
 """
 
@@ -146,14 +146,24 @@ def train(cfg: Dict[str, Any]):
     amp_dtype = torch.bfloat16 if cfg.get('mixed_precision') == 'bf16' else torch.float16
     scaler = torch.amp.GradScaler(enabled=(use_amp and amp_dtype == torch.float16), device='cuda')
 
+    # ─────────── 预加载 Checkpoint (提前获取 WandB Run ID) ───────────
+    ckpt = None
+    if cfg.get('resume'):
+        print(f"[*] Loading checkpoint to resume: {cfg['resume']}")
+        ckpt = torch.load(cfg['resume'], map_location=device, weights_only=False)
+
     # ─────────── WandB（可选） ───────────
     use_wandb = cfg.get('wandb', {}).get('enabled', False)
     if use_wandb:
         import wandb
+        # 从 ckpt 中提取旧的 run_id
+        run_id = ckpt.get('wandb_run_id') if ckpt else None
         wandb.init(
             project=cfg['wandb'].get('project', 'ddpm-course'),
             name=cfg['wandb'].get('run_name', None),
             config=cfg,
+            id=run_id,         # 传入旧的 run_id（如果是新训练，这里是 None）
+            resume="allow",    # 允许断点恢复合并图表
         )
 
     # ─────────── 训练循环 ───────────
@@ -163,6 +173,9 @@ def train(cfg: Dict[str, Any]):
     ckpt_every = cfg['training'].get('ckpt_every', 5000)
     grad_clip = cfg['training'].get('grad_clip', 1.0)
 
+    # 设置最多保留的 checkpoint 数量，默认为 3
+    max_keep_ckpts = cfg['training'].get('max_keep_ckpts', 3)
+
     # ─────────── 绘图记录初始化 ───────────
     use_plotting = cfg.get('plotting', {}).get('enabled', False)
     if use_plotting:
@@ -171,14 +184,18 @@ def train(cfg: Dict[str, Any]):
         history_steps = []
         history_losses = []
         history_mems = []
+        # 自动扫描并排序历史遗留的 Checkpoint
+        ckpt_dir = output_dir / 'ckpt'
+        saved_ckpts = sorted(list(ckpt_dir.glob('step_*.pt')))
+        if len(saved_ckpts) > 0:
+            print(f"[*] 已扫描到文件夹中存在的 {len(saved_ckpts)} 个历史 Checkpoint")
 
     global_step = 0
     start_epoch = 0
     
-    # ─────────── 恢复断点 (Resume) ───────────
-    if cfg.get('resume'):
-        print(f"[*] Resuming from checkpoint: {cfg['resume']}")
-        ckpt = torch.load(cfg['resume'], map_location=device, weights_only=False)
+    # ─────────── 恢复断点状态 ───────────
+    if ckpt:
+        print(f"[*] Restoring model and optimizer states...")
         model.load_state_dict(ckpt['model'])
         optimizer.load_state_dict(ckpt['optimizer'])
         if ema is not None and 'ema' in ckpt:
@@ -193,6 +210,7 @@ def train(cfg: Dict[str, Any]):
         if scheduler_lr is not None:
             scheduler_lr.last_epoch = global_step
 
+    initial_step = global_step
     start_time = time.time()
     print(f"[train] Starting training for {num_epochs} epochs")
 
@@ -244,7 +262,9 @@ def train(cfg: Dict[str, Any]):
             # ─────────── Logging ───────────
             if global_step % log_every == 0:
                 elapsed = time.time() - start_time
-                steps_per_sec = global_step / elapsed
+                # 修改速度计算逻辑，只计算本次运行实际跑过的步数
+                #     steps_per_sec = global_step / elapsed
+                steps_per_sec = (global_step - initial_step) / elapsed 
                 lr_now = optimizer.param_groups[0]['lr']
                 print(f"[ep {epoch:03d} step {global_step:06d}] "
                       f"loss={loss.item():.4f} lr={lr_now:.2e} "
@@ -255,6 +275,8 @@ def train(cfg: Dict[str, Any]):
                         'lr': lr_now,
                         'epoch': epoch,
                         'steps_per_sec': steps_per_sec,
+                        # 新增：将自己获取的显存数据传给 WandB
+                        'custom/gpu_mem_gb': torch.cuda.memory_reserved(device) / (1024 ** 3)
                     }, step=global_step)
 
             # ─────────── Sampling ───────────
@@ -312,12 +334,26 @@ def train(cfg: Dict[str, Any]):
                     'optimizer': optimizer.state_dict(),
                     'config': cfg,
                 }
+                # 将当前 WandB 的 run_id 保存进断点中
+                if use_wandb and wandb.run is not None:
+                    save_dict['wandb_run_id'] = wandb.run.id
                 if ema is not None:
                     save_dict['ema'] = ema.state_dict()
                 if use_amp and amp_dtype == torch.float16:
                     save_dict['scaler'] = scaler.state_dict()
                 torch.save(save_dict, ckpt_path)
                 print(f"  [ckpt] saved to {ckpt_path}")
+
+                # 保留最近的 max_keep_ckpts 个 Checkpoint 的机制
+                saved_ckpts.append(ckpt_path)
+                if len(saved_ckpts) > max_keep_ckpts:
+                    old_ckpt = saved_ckpts.pop(0) # 弹出列表第一个（最老的）
+                    if old_ckpt.exists():
+                        try:
+                            old_ckpt.unlink() # 从硬盘上删除文件
+                            print(f"  [ckpt] removed old checkpoint: {old_ckpt}")
+                        except Exception as e:
+                            print(f"  [ckpt] warning: failed to remove {old_ckpt}: {e}")
 
     # ─────────── 训练结束 ───────────
     final_ckpt = output_dir / 'ckpt' / 'final.pt'
@@ -326,6 +362,8 @@ def train(cfg: Dict[str, Any]):
         'model': model.state_dict(),
         'config': cfg,
     }
+    if use_wandb and wandb.run is not None:
+        save_dict['wandb_run_id'] = wandb.run.id
     if ema is not None:
         save_dict['ema'] = ema.state_dict()
     torch.save(save_dict, final_ckpt)

@@ -11,7 +11,7 @@ seed: 42
 # ─────────── 数据 ───────────
 dataset:
   name: cifar10
-  batch_size: 128
+  batch_size: 64 # 原来是128， 由于我的3060是6GB显存，所以只能减半 
   image_size: 32
   num_workers: 4
   root: ./data
@@ -54,9 +54,10 @@ training:
   sample_every: 2500
   ckpt_every: 10000
   grad_clip: 1.0
+  max_keep_ckpts: 3           # 最多保留最近的 3 个 checkpoint
 
 # ─────────── WandB（强烈推荐） ───────────
 wandb:
-  enabled: false             # 长时间训练强烈建议开启 wandb 监控
+  enabled: true             # 长时间训练强烈建议开启 wandb 监控
   project: ddpm-course
   run_name: cifar10_linear_baseline

@@ -1,0 +1,111 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            b5k0ptcn3d3rpc5aasqeythg7zslklhj:
+                args:
+                    - --config
+                    - configs/cifar10.yaml
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 14
+                cpu_count_logical: 20
+                cudaVersion: "12.3"
+                disk:
+                    /:
+                        total: "294972813312"
+                        used: "278677139456"
+                email: worldexplorer111111@gmail.com
+                executable: D:\Anaconda\python.exe
+                git:
+                    commit: 7b70a5c3e0f5b05155610826c2d4f453ecc1fa63
+                    remote: https://github.com/coding-all-the-time/diffusion-model-prectical-project1.git
+                gpu: NVIDIA GeForce RTX 3060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 3840
+                      memoryTotal: "6442450944"
+                      name: NVIDIA GeForce RTX 3060 Laptop GPU
+                      uuid: GPU-32fdba55-ea40-670a-c91e-615af008e483
+                host: LAPTOP-GR5M7IBG
+                memory:
+                    total: "16890978304"
+                os: Windows-10-10.0.22631-SP0
+                program: D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\train.py
+                python: CPython 3.9.13
+                root: D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1
+                startedAt: "2026-05-26T15:04:18.151500Z"
+                writerId: b5k0ptcn3d3rpc5aasqeythg7zslklhj
+        m: []
+        python_version: 3.9.13
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 13
+                - 16
+                - 61
+            "4": 3.9.13
+            "5": 0.26.1
+            "8":
+                - 3
+            "12": 0.26.1
+            "13": windows-amd64
+dataset:
+    value:
+        batch_size: 64
+        image_size: 32
+        name: cifar10
+        num_workers: 4
+        root: ./data
+diffusion:
+    value:
+        T: 1000
+        beta_end: 0.02
+        beta_schedule: linear
+        beta_start: 0.0001
+ema_decay:
+    value: 0.9999
+mixed_precision:
+    value: fp16
+model:
+    value:
+        attn_resolutions:
+            - 16
+        base_channels: 128
+        channel_mult:
+            - 1
+            - 2
+            - 2
+            - 2
+        dropout: 0.1
+        image_size: 32
+        in_channels: 3
+        num_res_blocks: 2
+        out_channels: 3
+optimizer:
+    value:
+        lr: 0.0002
+        warmup_steps: 5000
+        weight_decay: 0
+output_dir:
+    value: runs/exp_cifar10_baseline
+seed:
+    value: 42
+training:
+    value:
+        ckpt_every: 10000
+        grad_clip: 1
+        log_every: 100
+        num_epochs: 200
+        sample_every: 2500
+wandb:
+    value:
+        enabled: true
+        project: ddpm-course
+        run_name: cifar10_linear_baseline

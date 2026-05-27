@@ -35,9 +35,9 @@ git clone https://github.com/Qi-StarterTrain/diffusion-models-starter-materials.
 ### 基础档（必做，60 分）
 
 - [x] 实现完整代码（按照下方"代码任务清单"）
-- [ ] 在 MNIST 上训练 50 epoch
-- [ ] 能生成视觉可辨认的数字（手写数字应当大致清晰）
-- [ ] 提交训练曲线 + 64 张样本网格 + 实验日志
+- [x] 在 MNIST 上训练 50 epoch
+- [x] 能生成视觉可辨认的数字（手写数字应当大致清晰）
+- [x] 提交训练曲线 + 64 张样本网格 + 实验日志
 
 ### 进阶档（推荐，+20 分）
 

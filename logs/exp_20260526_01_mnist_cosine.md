@@ -1,5 +1,4 @@
 # Experiment Log 
-## Experiment 1
 
 `exp_20260526_01_mnist_cosine`
 
@@ -20,7 +19,7 @@
 | 硬件 | NVIDIA GeForce RTX 3060 6GB × 1 |
 | 框架版本 | PyTorch 2.3.0, CUDA 12.1 |
 | 仓库 | github.com/coding-all-the-time/diffusion-model-prectical-project1 |
-| Git commit | `17f6ba4`|
+| Git commit | `7b70a5c`|
 | Git 分支 | `origin/main` |
 
 ---
@@ -157,8 +156,9 @@ python train.py --config configs/mnist_cosine.yaml
 
 **简短说明**：
 1. Cosine schedule 带 EMA 的 FID (2.9506) 与上一版 Linear (2.8824) 基本持平，肉眼观察采样结果也相似，说明在 MNIST 这种简单数据集上，两种 schedule 的上限都很高。
-2. 不带 EMA 的采样结果中，63 张里出现了一张笔画不清晰和一张纯白色样本，且 FID 升至 7.4592（差于 Linear 的 5.3107）。这表明模型对 Cosine 调度的噪声分布适应得不如 Linear 稳定，可能目前的恒定学习率（2.0e-4）对 Cosine 来说并非最优。
-3. 由于遭遇断电导致硬件降频（降至 2.01 steps/s），本次训练耗时达 193.9 分钟，未能与上一版（98.6 分钟）形成公平对比，但显存峰值（4.04 GB）保持在合理范围内。
+2. Cosine schedule 在前 5000 步会变为全黑，然后才慢慢显现出数字；而 Linear schedule 则在前 2000 步就显示出数字的轮廓。说明Cosine schedule 的 SNR 分配策略比 Linear schedule 更平滑，在前期不出现陡降而忽略细节学习。
+3. 不带 EMA 的采样结果中，63 张里出现了一张笔画不清晰和一张纯白色样本，且 FID 升至 7.4592（差于 Linear 的 5.3107）。这表明模型对 Cosine 调度的噪声分布适应得不如 Linear 稳定，可能目前的恒定学习率（2.0e-4）对 Cosine 来说并非最优。
+4. 由于遭遇断电导致硬件降频（降至 2.01 steps/s），本次训练耗时达 193.9 分钟，未能与上一版（98.6 分钟）形成公平对比，但显存峰值（4.04 GB）保持在合理范围内。
 
 ### 6.2 现象记录
 

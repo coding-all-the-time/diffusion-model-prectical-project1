@@ -1,0 +1,122 @@
+_wandb:
+    value:
+        cli_version: 0.26.1
+        e:
+            n6vs5vr8eri89rvsgvlei3kwlvs0o0du:
+                args:
+                    - --config
+                    - configs/mnist_cosine_resume.yaml
+                    - --resume
+                    - runs/exp_mnist_cosine_resume/ckpt/step_005000.pt
+                codePath: train.py
+                codePathLocal: train.py
+                cpu_count: 14
+                cpu_count_logical: 20
+                cudaVersion: "12.3"
+                disk:
+                    /:
+                        total: "294972813312"
+                        used: "278312132608"
+                email: worldexplorer111111@gmail.com
+                executable: D:\Anaconda\python.exe
+                git:
+                    commit: 7b70a5c3e0f5b05155610826c2d4f453ecc1fa63
+                    remote: https://github.com/coding-all-the-time/diffusion-model-prectical-project1.git
+                gpu: NVIDIA GeForce RTX 3060 Laptop GPU
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 3840
+                      memoryTotal: "6442450944"
+                      name: NVIDIA GeForce RTX 3060 Laptop GPU
+                      uuid: GPU-32fdba55-ea40-670a-c91e-615af008e483
+                host: LAPTOP-GR5M7IBG
+                memory:
+                    total: "16890978304"
+                os: Windows-10-10.0.22631-SP0
+                program: D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\train.py
+                python: CPython 3.9.13
+                root: D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1
+                startedAt: "2026-05-26T12:27:33.667237Z"
+                writerId: n6vs5vr8eri89rvsgvlei3kwlvs0o0du
+        m: []
+        python_version: 3.9.13
+        t:
+            "1":
+                - 1
+                - 41
+            "2":
+                - 1
+                - 41
+            "3":
+                - 2
+                - 5
+                - 13
+                - 14
+                - 16
+                - 61
+                - 62
+            "4": 3.9.13
+            "5": 0.26.1
+            "8":
+                - 3
+            "12": 0.26.1
+            "13": windows-amd64
+dataset:
+    value:
+        batch_size: 128
+        image_size: 32
+        name: mnist
+        num_workers: 4
+        root: ./data
+diffusion:
+    value:
+        T: 1000
+        beta_schedule: cosine
+        s: 0.008
+ema_decay:
+    value: 0.999
+mixed_precision:
+    value: fp16
+model:
+    value:
+        attn_resolutions:
+            - 16
+        base_channels: 64
+        channel_mult:
+            - 1
+            - 2
+            - 2
+        dropout: 0.1
+        image_size: 32
+        in_channels: 1
+        num_res_blocks: 2
+        out_channels: 1
+optimizer:
+    value:
+        lr: 0.0002
+        warmup_steps: 1000
+        weight_decay: 0
+output_dir:
+    value: runs/exp_mnist_cosine_resume
+plotting:
+    value:
+        enabled: true
+        plot_every: 1000
+        record_every: 50
+resume:
+    value: runs/exp_mnist_cosine_resume/ckpt/step_005000.pt
+seed:
+    value: 42
+training:
+    value:
+        ckpt_every: 5000
+        grad_clip: 1
+        log_every: 50
+        num_epochs: 50
+        sample_every: 1000
+wandb:
+    value:
+        enabled: true
+        project: ddpm-course
+        run_name: mnist_cosine_resume

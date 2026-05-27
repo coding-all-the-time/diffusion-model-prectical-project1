@@ -1,5 +1,4 @@
 # Experiment Log 
-## Experiment 1
 
 `exp_20260525_01_mnist_baseline_2`
 
@@ -20,7 +19,7 @@
 | 硬件 | NVIDIA GeForce RTX 3060 6GB × 1 |
 | 框架版本 | PyTorch 2.3.0, CUDA 12.1 |
 | 仓库 | github.com/coding-all-the-time/diffusion-model-prectical-project1 |
-| Git commit | `876fd72`|
+| Git commit | `17f6ba4`|
 | Git 分支 | `origin/main` |
 
 ---
