@@ -1,0 +1,1219 @@
+[*] 已扫描到文件夹中存在的 7 个历史 Checkpoint
+[*] Restoring model and optimizer states...
+[train] Starting training for 200 epochs
+[ep 077 step 060100] loss=0.0325 lr=2.00e-04 (2.0 step/s)
+wandb: WARNING Tried to log to step 60100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060200] loss=0.0353 lr=2.00e-04 (2.4 step/s)
+wandb: WARNING Tried to log to step 60200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060300] loss=0.0341 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 60300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060400] loss=0.0288 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 60400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060500] loss=0.0380 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 60500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060600] loss=0.0220 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 60600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060700] loss=0.0410 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 60700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 060800] loss=0.0479 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 60800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 060900] loss=0.0338 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 60900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061000] loss=0.0228 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 61000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061100] loss=0.0300 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 61100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061200] loss=0.0379 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061300] loss=0.0437 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061400] loss=0.0209 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061500] loss=0.0268 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061600] loss=0.0279 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061700] loss=0.0251 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061800] loss=0.0250 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061900] loss=0.0184 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062000] loss=0.0291 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 62000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062100] loss=0.0260 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062200] loss=0.0329 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062300] loss=0.0281 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062400] loss=0.0286 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062500] loss=0.0291 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_062500.png
+[ep 080 step 062600] loss=0.0324 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 62600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062700] loss=0.0300 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 62700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062800] loss=0.0259 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 62800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062900] loss=0.0409 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 063000] loss=0.0320 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 63000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 063100] loss=0.0301 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063200] loss=0.0375 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063300] loss=0.0215 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063400] loss=0.0205 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063500] loss=0.0344 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063600] loss=0.0313 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063700] loss=0.0305 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063800] loss=0.0310 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063900] loss=0.0246 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064000] loss=0.0280 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 64000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064100] loss=0.0442 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064200] loss=0.0288 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064300] loss=0.0392 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064400] loss=0.0416 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064500] loss=0.0157 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064600] loss=0.0341 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 064700] loss=0.0271 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 064800] loss=0.0341 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 064900] loss=0.0289 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 64900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065000] loss=0.0318 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_065000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 083 step 065100] loss=0.0258 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065200] loss=0.0236 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065300] loss=0.0232 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065400] loss=0.0245 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065500] loss=0.0331 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065600] loss=0.0358 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065700] loss=0.0341 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065800] loss=0.0294 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065900] loss=0.0185 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 65900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 066000] loss=0.0308 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 66000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 066100] loss=0.0252 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 066200] loss=0.0285 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066300] loss=0.0333 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066400] loss=0.0247 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066500] loss=0.0380 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066600] loss=0.0269 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066700] loss=0.0256 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066800] loss=0.0303 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066900] loss=0.0312 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 66900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 067000] loss=0.0318 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 67000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067100] loss=0.0249 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067200] loss=0.0314 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067300] loss=0.0319 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067400] loss=0.0391 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067500] loss=0.0257 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_067500.png
+[ep 086 step 067600] loss=0.0144 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067700] loss=0.0229 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067800] loss=0.0266 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 067900] loss=0.0259 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 67900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068000] loss=0.0321 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 68000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068100] loss=0.0253 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068200] loss=0.0412 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068300] loss=0.0279 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068400] loss=0.0309 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068500] loss=0.0150 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068600] loss=0.0252 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068700] loss=0.0463 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068800] loss=0.0353 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068900] loss=0.0323 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 68900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069000] loss=0.0285 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+wandb: WARNING Tried to log to step 69000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069100] loss=0.0176 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 69100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069200] loss=0.0268 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 69200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069300] loss=0.0251 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 69300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069400] loss=0.0244 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069500] loss=0.0253 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069600] loss=0.0295 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069700] loss=0.0296 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069800] loss=0.0351 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069900] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 070000] loss=0.0213 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 70000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_070000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_070000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_010000.pt
+[ep 089 step 070100] loss=0.0204 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070200] loss=0.0261 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070300] loss=0.0357 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070400] loss=0.0386 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070500] loss=0.0304 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070600] loss=0.0491 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070700] loss=0.0358 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070800] loss=0.0274 lr=2.00e-04 (2.7 step/s)
+[ep 090 step 070900] loss=0.0260 lr=2.00e-04 (2.7 step/s)
+[ep 091 step 071000] loss=0.0347 lr=2.00e-04 (2.7 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 091 step 071100] loss=0.0372 lr=2.00e-04 (2.7 step/s)
+[ep 091 step 071200] loss=0.0210 lr=2.00e-04 (2.8 step/s)
+[ep 091 step 071300] loss=0.0341 lr=2.00e-04 (2.8 step/s)
+[ep 091 step 071400] loss=0.0426 lr=2.00e-04 (2.8 step/s)
+[ep 091 step 071500] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+[ep 091 step 071600] loss=0.0300 lr=2.00e-04 (2.8 step/s)
+[ep 091 step 071700] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+[ep 092 step 071800] loss=0.0233 lr=2.00e-04 (2.8 step/s)
+[ep 092 step 071900] loss=0.0237 lr=2.00e-04 (2.8 step/s)
+[ep 092 step 072000] loss=0.0208 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 092 step 072100] loss=0.0308 lr=2.00e-04 (2.8 step/s)
+[ep 092 step 072200] loss=0.0419 lr=2.00e-04 (2.8 step/s)
+[ep 092 step 072300] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+[ep 092 step 072400] loss=0.0490 lr=2.00e-04 (2.8 step/s)
+[ep 093 step 072500] loss=0.0288 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_072500.png
+[ep 093 step 072600] loss=0.0305 lr=2.00e-04 (2.7 step/s)
+[ep 093 step 072700] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 093 step 072800] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 093 step 072900] loss=0.0404 lr=2.00e-04 (2.8 step/s)
+[ep 093 step 073000] loss=0.0323 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 093 step 073100] loss=0.0261 lr=2.00e-04 (2.8 step/s)
+[ep 093 step 073200] loss=0.0195 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 073300] loss=0.0458 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 073400] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 073500] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 073600] loss=0.0263 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 073700] loss=0.0165 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 073800] loss=0.0243 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 073900] loss=0.0316 lr=2.00e-04 (2.8 step/s)
+[ep 094 step 074000] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 095 step 074100] loss=0.0214 lr=2.00e-04 (2.8 step/s)
+[ep 095 step 074200] loss=0.0446 lr=2.00e-04 (2.8 step/s)
+[ep 095 step 074300] loss=0.0240 lr=2.00e-04 (2.8 step/s)
+[ep 095 step 074400] loss=0.0298 lr=2.00e-04 (2.8 step/s)
+[ep 095 step 074500] loss=0.0192 lr=2.00e-04 (2.8 step/s)
+[ep 095 step 074600] loss=0.0198 lr=2.00e-04 (2.8 step/s)
+[ep 095 step 074700] loss=0.0355 lr=2.00e-04 (2.8 step/s)
+[ep 095 step 074800] loss=0.0384 lr=2.00e-04 (2.8 step/s)
+[ep 096 step 074900] loss=0.0276 lr=2.00e-04 (2.8 step/s)
+[ep 096 step 075000] loss=0.0386 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_075000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 096 step 075100] loss=0.0159 lr=2.00e-04 (2.8 step/s)
+[ep 096 step 075200] loss=0.0283 lr=2.00e-04 (2.8 step/s)
+[ep 096 step 075300] loss=0.0465 lr=2.00e-04 (2.8 step/s)
+[ep 096 step 075400] loss=0.0266 lr=2.00e-04 (2.8 step/s)
+[ep 096 step 075500] loss=0.0280 lr=2.00e-04 (2.8 step/s)
+[ep 096 step 075600] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 097 step 075700] loss=0.0401 lr=2.00e-04 (2.8 step/s)
+[ep 097 step 075800] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 097 step 075900] loss=0.0236 lr=2.00e-04 (2.8 step/s)
+[ep 097 step 076000] loss=0.0209 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 097 step 076100] loss=0.0287 lr=2.00e-04 (2.8 step/s)
+[ep 097 step 076200] loss=0.0464 lr=2.00e-04 (2.8 step/s)
+[ep 097 step 076300] loss=0.0191 lr=2.00e-04 (2.8 step/s)
+[ep 097 step 076400] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 098 step 076500] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 098 step 076600] loss=0.0298 lr=2.00e-04 (2.8 step/s)
+[ep 098 step 076700] loss=0.0190 lr=2.00e-04 (2.8 step/s)
+[ep 098 step 076800] loss=0.0342 lr=2.00e-04 (2.8 step/s)
+[ep 098 step 076900] loss=0.0378 lr=2.00e-04 (2.8 step/s)
+[ep 098 step 077000] loss=0.0207 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 098 step 077100] loss=0.0575 lr=2.00e-04 (2.8 step/s)
+[ep 099 step 077200] loss=0.0247 lr=2.00e-04 (2.8 step/s)
+[ep 099 step 077300] loss=0.0269 lr=2.00e-04 (2.8 step/s)
+[ep 099 step 077400] loss=0.0354 lr=2.00e-04 (2.8 step/s)
+[ep 099 step 077500] loss=0.0342 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_077500.png
+[ep 099 step 077600] loss=0.0359 lr=2.00e-04 (2.8 step/s)
+[ep 099 step 077700] loss=0.0214 lr=2.00e-04 (2.8 step/s)
+[ep 099 step 077800] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 099 step 077900] loss=0.0328 lr=2.00e-04 (2.8 step/s)
+[ep 100 step 078000] loss=0.0227 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 100 step 078100] loss=0.0253 lr=2.00e-04 (2.8 step/s)
+[ep 100 step 078200] loss=0.0332 lr=2.00e-04 (2.8 step/s)
+[ep 100 step 078300] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+[ep 100 step 078400] loss=0.0465 lr=2.00e-04 (2.8 step/s)
+[ep 100 step 078500] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+[ep 100 step 078600] loss=0.0221 lr=2.00e-04 (2.8 step/s)
+[ep 100 step 078700] loss=0.0240 lr=2.00e-04 (2.8 step/s)
+[ep 101 step 078800] loss=0.0254 lr=2.00e-04 (2.8 step/s)
+[ep 101 step 078900] loss=0.0376 lr=2.00e-04 (2.8 step/s)
+[ep 101 step 079000] loss=0.0359 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 101 step 079100] loss=0.0475 lr=2.00e-04 (2.8 step/s)
+[ep 101 step 079200] loss=0.0404 lr=2.00e-04 (2.8 step/s)
+[ep 101 step 079300] loss=0.0218 lr=2.00e-04 (2.8 step/s)
+[ep 101 step 079400] loss=0.0301 lr=2.00e-04 (2.8 step/s)
+[ep 101 step 079500] loss=0.0216 lr=2.00e-04 (2.8 step/s)
+[ep 102 step 079600] loss=0.0210 lr=2.00e-04 (2.8 step/s)
+[ep 102 step 079700] loss=0.0389 lr=2.00e-04 (2.8 step/s)
+[ep 102 step 079800] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 102 step 079900] loss=0.0372 lr=2.00e-04 (2.8 step/s)
+[ep 102 step 080000] loss=0.0372 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_080000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_080000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_020000.pt
+[ep 102 step 080100] loss=0.0423 lr=2.00e-04 (2.8 step/s)
+[ep 102 step 080200] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+[ep 102 step 080300] loss=0.0295 lr=2.00e-04 (2.8 step/s)
+[ep 103 step 080400] loss=0.0349 lr=2.00e-04 (2.8 step/s)
+[ep 103 step 080500] loss=0.0360 lr=2.00e-04 (2.8 step/s)
+[ep 103 step 080600] loss=0.0270 lr=2.00e-04 (2.8 step/s)
+[ep 103 step 080700] loss=0.0284 lr=2.00e-04 (2.8 step/s)
+[ep 103 step 080800] loss=0.0603 lr=2.00e-04 (2.8 step/s)
+[ep 103 step 080900] loss=0.0253 lr=2.00e-04 (2.8 step/s)
+[ep 103 step 081000] loss=0.0394 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 104 step 081100] loss=0.0282 lr=2.00e-04 (2.8 step/s)
+[ep 104 step 081200] loss=0.0393 lr=2.00e-04 (2.8 step/s)
+[ep 104 step 081300] loss=0.0278 lr=2.00e-04 (2.8 step/s)
+[ep 104 step 081400] loss=0.0411 lr=2.00e-04 (2.8 step/s)
+[ep 104 step 081500] loss=0.0338 lr=2.00e-04 (2.8 step/s)
+[ep 104 step 081600] loss=0.0183 lr=2.00e-04 (2.8 step/s)
+[ep 104 step 081700] loss=0.0301 lr=2.00e-04 (2.8 step/s)
+[ep 104 step 081800] loss=0.0427 lr=2.00e-04 (2.8 step/s)
+[ep 105 step 081900] loss=0.0212 lr=2.00e-04 (2.8 step/s)
+[ep 105 step 082000] loss=0.0312 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 105 step 082100] loss=0.0400 lr=2.00e-04 (2.8 step/s)
+[ep 105 step 082200] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 105 step 082300] loss=0.0366 lr=2.00e-04 (2.8 step/s)
+[ep 105 step 082400] loss=0.0244 lr=2.00e-04 (2.8 step/s)
+[ep 105 step 082500] loss=0.0171 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_082500.png
+[ep 105 step 082600] loss=0.0476 lr=2.00e-04 (2.8 step/s)
+[ep 106 step 082700] loss=0.0215 lr=2.00e-04 (2.8 step/s)
+[ep 106 step 082800] loss=0.0368 lr=2.00e-04 (2.8 step/s)
+[ep 106 step 082900] loss=0.0360 lr=2.00e-04 (2.8 step/s)
+[ep 106 step 083000] loss=0.0216 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 106 step 083100] loss=0.0264 lr=2.00e-04 (2.8 step/s)
+[ep 106 step 083200] loss=0.0269 lr=2.00e-04 (2.8 step/s)
+[ep 106 step 083300] loss=0.0470 lr=2.00e-04 (2.8 step/s)
+[ep 106 step 083400] loss=0.0213 lr=2.00e-04 (2.8 step/s)
+[ep 107 step 083500] loss=0.0317 lr=2.00e-04 (2.8 step/s)
+[ep 107 step 083600] loss=0.0203 lr=2.00e-04 (2.8 step/s)
+[ep 107 step 083700] loss=0.0322 lr=2.00e-04 (2.8 step/s)
+[ep 107 step 083800] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+[ep 107 step 083900] loss=0.0297 lr=2.00e-04 (2.8 step/s)
+[ep 107 step 084000] loss=0.0302 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 107 step 084100] loss=0.0211 lr=2.00e-04 (2.8 step/s)
+[ep 107 step 084200] loss=0.0372 lr=2.00e-04 (2.8 step/s)
+[ep 108 step 084300] loss=0.0328 lr=2.00e-04 (2.8 step/s)
+[ep 108 step 084400] loss=0.0329 lr=2.00e-04 (2.8 step/s)
+[ep 108 step 084500] loss=0.0303 lr=2.00e-04 (2.8 step/s)
+[ep 108 step 084600] loss=0.0379 lr=2.00e-04 (2.8 step/s)
+[ep 108 step 084700] loss=0.0338 lr=2.00e-04 (2.8 step/s)
+[ep 108 step 084800] loss=0.0297 lr=2.00e-04 (2.8 step/s)
+[ep 108 step 084900] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+[ep 109 step 085000] loss=0.0286 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_085000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 109 step 085100] loss=0.0525 lr=2.00e-04 (2.8 step/s)
+[ep 109 step 085200] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+[ep 109 step 085300] loss=0.0286 lr=2.00e-04 (2.8 step/s)
+[ep 109 step 085400] loss=0.0258 lr=2.00e-04 (2.8 step/s)
+[ep 109 step 085500] loss=0.0201 lr=2.00e-04 (2.8 step/s)
+[ep 109 step 085600] loss=0.0189 lr=2.00e-04 (2.8 step/s)
+[ep 109 step 085700] loss=0.0283 lr=2.00e-04 (2.8 step/s)
+[ep 110 step 085800] loss=0.0185 lr=2.00e-04 (2.8 step/s)
+[ep 110 step 085900] loss=0.0229 lr=2.00e-04 (2.8 step/s)
+[ep 110 step 086000] loss=0.0407 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 110 step 086100] loss=0.0351 lr=2.00e-04 (2.8 step/s)
+[ep 110 step 086200] loss=0.0397 lr=2.00e-04 (2.8 step/s)
+[ep 110 step 086300] loss=0.0400 lr=2.00e-04 (2.8 step/s)
+[ep 110 step 086400] loss=0.0449 lr=2.00e-04 (2.8 step/s)
+[ep 110 step 086500] loss=0.0283 lr=2.00e-04 (2.8 step/s)
+[ep 111 step 086600] loss=0.0371 lr=2.00e-04 (2.8 step/s)
+[ep 111 step 086700] loss=0.0211 lr=2.00e-04 (2.8 step/s)
+[ep 111 step 086800] loss=0.0316 lr=2.00e-04 (2.8 step/s)
+[ep 111 step 086900] loss=0.0353 lr=2.00e-04 (2.8 step/s)
+[ep 111 step 087000] loss=0.0324 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 111 step 087100] loss=0.0380 lr=2.00e-04 (2.8 step/s)
+[ep 111 step 087200] loss=0.0189 lr=2.00e-04 (2.8 step/s)
+[ep 111 step 087300] loss=0.0303 lr=2.00e-04 (2.8 step/s)
+[ep 112 step 087400] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+[ep 112 step 087500] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_087500.png
+[ep 112 step 087600] loss=0.0232 lr=2.00e-04 (2.8 step/s)
+[ep 112 step 087700] loss=0.0362 lr=2.00e-04 (2.8 step/s)
+[ep 112 step 087800] loss=0.0353 lr=2.00e-04 (2.8 step/s)
+[ep 112 step 087900] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+[ep 112 step 088000] loss=0.0337 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 112 step 088100] loss=0.0306 lr=2.00e-04 (2.8 step/s)
+[ep 113 step 088200] loss=0.0266 lr=2.00e-04 (2.8 step/s)
+[ep 113 step 088300] loss=0.0389 lr=2.00e-04 (2.8 step/s)
+[ep 113 step 088400] loss=0.0269 lr=2.00e-04 (2.8 step/s)
+[ep 113 step 088500] loss=0.0204 lr=2.00e-04 (2.8 step/s)
+[ep 113 step 088600] loss=0.0441 lr=2.00e-04 (2.8 step/s)
+[ep 113 step 088700] loss=0.0424 lr=2.00e-04 (2.8 step/s)
+[ep 113 step 088800] loss=0.0232 lr=2.00e-04 (2.8 step/s)
+[ep 114 step 088900] loss=0.0271 lr=2.00e-04 (2.8 step/s)
+[ep 114 step 089000] loss=0.0338 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 114 step 089100] loss=0.0340 lr=2.00e-04 (2.8 step/s)
+[ep 114 step 089200] loss=0.0361 lr=2.00e-04 (2.8 step/s)
+[ep 114 step 089300] loss=0.0289 lr=2.00e-04 (2.8 step/s)
+[ep 114 step 089400] loss=0.0181 lr=2.00e-04 (2.8 step/s)
+[ep 114 step 089500] loss=0.0316 lr=2.00e-04 (2.8 step/s)
+[ep 114 step 089600] loss=0.0185 lr=2.00e-04 (2.8 step/s)
+[ep 115 step 089700] loss=0.0470 lr=2.00e-04 (2.8 step/s)
+[ep 115 step 089800] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 115 step 089900] loss=0.0301 lr=2.00e-04 (2.8 step/s)
+[ep 115 step 090000] loss=0.0244 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_090000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_090000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_030000.pt
+[ep 115 step 090100] loss=0.0388 lr=2.00e-04 (2.8 step/s)
+[ep 115 step 090200] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+[ep 115 step 090300] loss=0.0294 lr=2.00e-04 (2.8 step/s)
+[ep 115 step 090400] loss=0.0303 lr=2.00e-04 (2.8 step/s)
+[ep 116 step 090500] loss=0.0274 lr=2.00e-04 (2.8 step/s)
+[ep 116 step 090600] loss=0.0347 lr=2.00e-04 (2.8 step/s)
+[ep 116 step 090700] loss=0.0278 lr=2.00e-04 (2.8 step/s)
+[ep 116 step 090800] loss=0.0221 lr=2.00e-04 (2.8 step/s)
+[ep 116 step 090900] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+[ep 116 step 091000] loss=0.0218 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 116 step 091100] loss=0.0277 lr=2.00e-04 (2.8 step/s)
+[ep 116 step 091200] loss=0.0349 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 091300] loss=0.0162 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 091400] loss=0.0306 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 091500] loss=0.0204 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 091600] loss=0.0438 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 091700] loss=0.0295 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 091800] loss=0.0282 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 091900] loss=0.0215 lr=2.00e-04 (2.8 step/s)
+[ep 117 step 092000] loss=0.0246 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 118 step 092100] loss=0.0495 lr=2.00e-04 (2.8 step/s)
+[ep 118 step 092200] loss=0.0270 lr=2.00e-04 (2.8 step/s)
+[ep 118 step 092300] loss=0.0267 lr=2.00e-04 (2.8 step/s)
+[ep 118 step 092400] loss=0.0301 lr=2.00e-04 (2.8 step/s)
+[ep 118 step 092500] loss=0.0476 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_092500.png
+[ep 118 step 092600] loss=0.0254 lr=2.00e-04 (2.8 step/s)
+[ep 118 step 092700] loss=0.0194 lr=2.00e-04 (2.8 step/s)
+[ep 118 step 092800] loss=0.0380 lr=2.00e-04 (2.8 step/s)
+[ep 119 step 092900] loss=0.0321 lr=2.00e-04 (2.8 step/s)
+[ep 119 step 093000] loss=0.0261 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 119 step 093100] loss=0.0187 lr=2.00e-04 (2.8 step/s)
+[ep 119 step 093200] loss=0.0379 lr=2.00e-04 (2.8 step/s)
+[ep 119 step 093300] loss=0.0431 lr=2.00e-04 (2.8 step/s)
+[ep 119 step 093400] loss=0.0220 lr=2.00e-04 (2.8 step/s)
+[ep 119 step 093500] loss=0.0239 lr=2.00e-04 (2.8 step/s)
+[ep 120 step 093600] loss=0.0344 lr=2.00e-04 (2.8 step/s)
+[ep 120 step 093700] loss=0.0452 lr=2.00e-04 (2.8 step/s)
+[ep 120 step 093800] loss=0.0401 lr=2.00e-04 (2.8 step/s)
+[ep 120 step 093900] loss=0.0238 lr=2.00e-04 (2.8 step/s)
+[ep 120 step 094000] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 120 step 094100] loss=0.0412 lr=2.00e-04 (2.8 step/s)
+[ep 120 step 094200] loss=0.0206 lr=2.00e-04 (2.8 step/s)
+[ep 120 step 094300] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+[ep 121 step 094400] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+[ep 121 step 094500] loss=0.0282 lr=2.00e-04 (2.8 step/s)
+[ep 121 step 094600] loss=0.0253 lr=2.00e-04 (2.8 step/s)
+[ep 121 step 094700] loss=0.0260 lr=2.00e-04 (2.8 step/s)
+[ep 121 step 094800] loss=0.0428 lr=2.00e-04 (2.8 step/s)
+[ep 121 step 094900] loss=0.0181 lr=2.00e-04 (2.8 step/s)
+[ep 121 step 095000] loss=0.0228 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_095000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 121 step 095100] loss=0.0386 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095200] loss=0.0159 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095300] loss=0.0325 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095400] loss=0.0453 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095500] loss=0.0417 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095600] loss=0.0274 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095700] loss=0.0260 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095800] loss=0.0334 lr=2.00e-04 (2.8 step/s)
+[ep 122 step 095900] loss=0.0375 lr=2.00e-04 (2.8 step/s)
+[ep 123 step 096000] loss=0.0251 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 123 step 096100] loss=0.0321 lr=2.00e-04 (2.8 step/s)
+[ep 123 step 096200] loss=0.0246 lr=2.00e-04 (2.8 step/s)
+[ep 123 step 096300] loss=0.0245 lr=2.00e-04 (2.8 step/s)
+[ep 123 step 096400] loss=0.0310 lr=2.00e-04 (2.8 step/s)
+[ep 123 step 096500] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 123 step 096600] loss=0.0176 lr=2.00e-04 (2.8 step/s)
+[ep 123 step 096700] loss=0.0174 lr=2.00e-04 (2.8 step/s)
+[ep 124 step 096800] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+[ep 124 step 096900] loss=0.0226 lr=2.00e-04 (2.8 step/s)
+[ep 124 step 097000] loss=0.0351 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 124 step 097100] loss=0.0271 lr=2.00e-04 (2.8 step/s)
+[ep 124 step 097200] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+[ep 124 step 097300] loss=0.0176 lr=2.00e-04 (2.8 step/s)
+[ep 124 step 097400] loss=0.0238 lr=2.00e-04 (2.8 step/s)
+[ep 125 step 097500] loss=0.0204 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_097500.png
+[ep 125 step 097600] loss=0.0358 lr=2.00e-04 (2.8 step/s)
+[ep 125 step 097700] loss=0.0342 lr=2.00e-04 (2.8 step/s)
+[ep 125 step 097800] loss=0.0205 lr=2.00e-04 (2.8 step/s)
+[ep 125 step 097900] loss=0.0194 lr=2.00e-04 (2.8 step/s)
+[ep 125 step 098000] loss=0.0333 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 125 step 098100] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 125 step 098200] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 098300] loss=0.0163 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 098400] loss=0.0203 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 098500] loss=0.0361 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 098600] loss=0.0354 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 098700] loss=0.0349 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 098800] loss=0.0361 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 098900] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+[ep 126 step 099000] loss=0.0236 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 127 step 099100] loss=0.0284 lr=2.00e-04 (2.8 step/s)
+[ep 127 step 099200] loss=0.0407 lr=2.00e-04 (2.8 step/s)
+[ep 127 step 099300] loss=0.0408 lr=2.00e-04 (2.8 step/s)
+[ep 127 step 099400] loss=0.0194 lr=2.00e-04 (2.8 step/s)
+[ep 127 step 099500] loss=0.0308 lr=2.00e-04 (2.8 step/s)
+[ep 127 step 099600] loss=0.0437 lr=2.00e-04 (2.8 step/s)
+[ep 127 step 099700] loss=0.0187 lr=2.00e-04 (2.8 step/s)
+[ep 127 step 099800] loss=0.0278 lr=2.00e-04 (2.8 step/s)
+[ep 128 step 099900] loss=0.0298 lr=2.00e-04 (2.8 step/s)
+[ep 128 step 100000] loss=0.0322 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_100000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_100000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_040000.pt
+[ep 128 step 100100] loss=0.0296 lr=2.00e-04 (2.8 step/s)
+[ep 128 step 100200] loss=0.0328 lr=2.00e-04 (2.8 step/s)
+[ep 128 step 100300] loss=0.0198 lr=2.00e-04 (2.8 step/s)
+[ep 128 step 100400] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 128 step 100500] loss=0.0325 lr=2.00e-04 (2.8 step/s)
+[ep 128 step 100600] loss=0.0346 lr=2.00e-04 (2.8 step/s)
+[ep 129 step 100700] loss=0.0299 lr=2.00e-04 (2.8 step/s)
+[ep 129 step 100800] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+[ep 129 step 100900] loss=0.0361 lr=2.00e-04 (2.8 step/s)
+[ep 129 step 101000] loss=0.0246 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 129 step 101100] loss=0.0364 lr=2.00e-04 (2.8 step/s)
+[ep 129 step 101200] loss=0.0226 lr=2.00e-04 (2.8 step/s)
+[ep 129 step 101300] loss=0.0238 lr=2.00e-04 (2.8 step/s)
+[ep 130 step 101400] loss=0.0145 lr=2.00e-04 (2.8 step/s)
+[ep 130 step 101500] loss=0.0380 lr=2.00e-04 (2.8 step/s)
+[ep 130 step 101600] loss=0.0315 lr=2.00e-04 (2.8 step/s)
+[ep 130 step 101700] loss=0.0192 lr=2.00e-04 (2.8 step/s)
+[ep 130 step 101800] loss=0.0283 lr=2.00e-04 (2.8 step/s)
+[ep 130 step 101900] loss=0.0200 lr=2.00e-04 (2.8 step/s)
+[ep 130 step 102000] loss=0.0381 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 130 step 102100] loss=0.0272 lr=2.00e-04 (2.8 step/s)
+[ep 131 step 102200] loss=0.0273 lr=2.00e-04 (2.8 step/s)
+[ep 131 step 102300] loss=0.0561 lr=2.00e-04 (2.8 step/s)
+[ep 131 step 102400] loss=0.0281 lr=2.00e-04 (2.8 step/s)
+[ep 131 step 102500] loss=0.0290 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_102500.png
+[ep 131 step 102600] loss=0.0212 lr=2.00e-04 (2.8 step/s)
+[ep 131 step 102700] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 131 step 102800] loss=0.0218 lr=2.00e-04 (2.8 step/s)
+[ep 131 step 102900] loss=0.0312 lr=2.00e-04 (2.8 step/s)
+[ep 132 step 103000] loss=0.0208 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 132 step 103100] loss=0.0373 lr=2.00e-04 (2.8 step/s)
+[ep 132 step 103200] loss=0.0215 lr=2.00e-04 (2.8 step/s)
+[ep 132 step 103300] loss=0.0240 lr=2.00e-04 (2.8 step/s)
+[ep 132 step 103400] loss=0.0216 lr=2.00e-04 (2.8 step/s)
+[ep 132 step 103500] loss=0.0171 lr=2.00e-04 (2.8 step/s)
+[ep 132 step 103600] loss=0.0402 lr=2.00e-04 (2.8 step/s)
+[ep 132 step 103700] loss=0.0394 lr=2.00e-04 (2.8 step/s)
+[ep 133 step 103800] loss=0.0293 lr=2.00e-04 (2.8 step/s)
+[ep 133 step 103900] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 133 step 104000] loss=0.0336 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 133 step 104100] loss=0.0286 lr=2.00e-04 (2.8 step/s)
+[ep 133 step 104200] loss=0.0317 lr=2.00e-04 (2.8 step/s)
+[ep 133 step 104300] loss=0.0176 lr=2.00e-04 (2.8 step/s)
+[ep 133 step 104400] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+[ep 133 step 104500] loss=0.0392 lr=2.00e-04 (2.8 step/s)
+[ep 134 step 104600] loss=0.0256 lr=2.00e-04 (2.8 step/s)
+[ep 134 step 104700] loss=0.0304 lr=2.00e-04 (2.8 step/s)
+[ep 134 step 104800] loss=0.0366 lr=2.00e-04 (2.8 step/s)
+[ep 134 step 104900] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+[ep 134 step 105000] loss=0.0277 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_105000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 134 step 105100] loss=0.0333 lr=2.00e-04 (2.8 step/s)
+[ep 134 step 105200] loss=0.0297 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 105300] loss=0.0318 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 105400] loss=0.0458 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 105500] loss=0.0231 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 105600] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 105700] loss=0.0332 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 105800] loss=0.0287 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 105900] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+[ep 135 step 106000] loss=0.0341 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 136 step 106100] loss=0.0489 lr=2.00e-04 (2.8 step/s)
+[ep 136 step 106200] loss=0.0275 lr=2.00e-04 (2.8 step/s)
+[ep 136 step 106300] loss=0.0295 lr=2.00e-04 (2.8 step/s)
+[ep 136 step 106400] loss=0.0221 lr=2.00e-04 (2.8 step/s)
+[ep 136 step 106500] loss=0.0300 lr=2.00e-04 (2.8 step/s)
+[ep 136 step 106600] loss=0.0260 lr=2.00e-04 (2.8 step/s)
+[ep 136 step 106700] loss=0.0364 lr=2.00e-04 (2.8 step/s)
+[ep 136 step 106800] loss=0.0276 lr=2.00e-04 (2.8 step/s)
+[ep 137 step 106900] loss=0.0379 lr=2.00e-04 (2.8 step/s)
+[ep 137 step 107000] loss=0.0234 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 137 step 107100] loss=0.0323 lr=2.00e-04 (2.8 step/s)
+[ep 137 step 107200] loss=0.0401 lr=2.00e-04 (2.8 step/s)
+[ep 137 step 107300] loss=0.0211 lr=2.00e-04 (2.8 step/s)
+[ep 137 step 107400] loss=0.0276 lr=2.00e-04 (2.8 step/s)
+[ep 137 step 107500] loss=0.0296 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_107500.png
+[ep 137 step 107600] loss=0.0236 lr=2.00e-04 (2.8 step/s)
+[ep 138 step 107700] loss=0.0277 lr=2.00e-04 (2.8 step/s)
+[ep 138 step 107800] loss=0.0345 lr=2.00e-04 (2.8 step/s)
+[ep 138 step 107900] loss=0.0207 lr=2.00e-04 (2.8 step/s)
+[ep 138 step 108000] loss=0.0289 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 138 step 108100] loss=0.0270 lr=2.00e-04 (2.8 step/s)
+[ep 138 step 108200] loss=0.0418 lr=2.00e-04 (2.8 step/s)
+[ep 138 step 108300] loss=0.0418 lr=2.00e-04 (2.8 step/s)
+[ep 138 step 108400] loss=0.0395 lr=2.00e-04 (2.8 step/s)
+[ep 139 step 108500] loss=0.0231 lr=2.00e-04 (2.8 step/s)
+[ep 139 step 108600] loss=0.0310 lr=2.00e-04 (2.8 step/s)
+[ep 139 step 108700] loss=0.0240 lr=2.00e-04 (2.8 step/s)
+[ep 139 step 108800] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+[ep 139 step 108900] loss=0.0373 lr=2.00e-04 (2.8 step/s)
+[ep 139 step 109000] loss=0.0223 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 139 step 109100] loss=0.0208 lr=2.00e-04 (2.8 step/s)
+[ep 139 step 109200] loss=0.0353 lr=2.00e-04 (2.8 step/s)
+[ep 140 step 109300] loss=0.0313 lr=2.00e-04 (2.8 step/s)
+[ep 140 step 109400] loss=0.0373 lr=2.00e-04 (2.8 step/s)
+[ep 140 step 109500] loss=0.0326 lr=2.00e-04 (2.8 step/s)
+[ep 140 step 109600] loss=0.0219 lr=2.00e-04 (2.8 step/s)
+[ep 140 step 109700] loss=0.0354 lr=2.00e-04 (2.8 step/s)
+[ep 140 step 109800] loss=0.0364 lr=2.00e-04 (2.8 step/s)
+[ep 140 step 109900] loss=0.0409 lr=2.00e-04 (2.8 step/s)
+[ep 141 step 110000] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_110000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_110000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_050000.pt
+[ep 141 step 110100] loss=0.0312 lr=2.00e-04 (2.8 step/s)
+[ep 141 step 110200] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+[ep 141 step 110300] loss=0.0231 lr=2.00e-04 (2.8 step/s)
+[ep 141 step 110400] loss=0.0295 lr=2.00e-04 (2.8 step/s)
+[ep 141 step 110500] loss=0.0201 lr=2.00e-04 (2.8 step/s)
+[ep 141 step 110600] loss=0.0276 lr=2.00e-04 (2.8 step/s)
+[ep 141 step 110700] loss=0.0271 lr=2.00e-04 (2.8 step/s)
+[ep 142 step 110800] loss=0.0298 lr=2.00e-04 (2.8 step/s)
+[ep 142 step 110900] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+[ep 142 step 111000] loss=0.0455 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 142 step 111100] loss=0.0313 lr=2.00e-04 (2.8 step/s)
+[ep 142 step 111200] loss=0.0321 lr=2.00e-04 (2.8 step/s)
+[ep 142 step 111300] loss=0.0466 lr=2.00e-04 (2.8 step/s)
+[ep 142 step 111400] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+[ep 142 step 111500] loss=0.0235 lr=2.00e-04 (2.8 step/s)
+[ep 143 step 111600] loss=0.0281 lr=2.00e-04 (2.8 step/s)
+[ep 143 step 111700] loss=0.0260 lr=2.00e-04 (2.8 step/s)
+[ep 143 step 111800] loss=0.0187 lr=2.00e-04 (2.8 step/s)
+[ep 143 step 111900] loss=0.0385 lr=2.00e-04 (2.8 step/s)
+[ep 143 step 112000] loss=0.0364 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 143 step 112100] loss=0.0410 lr=2.00e-04 (2.8 step/s)
+[ep 143 step 112200] loss=0.0416 lr=2.00e-04 (2.8 step/s)
+[ep 143 step 112300] loss=0.0263 lr=2.00e-04 (2.8 step/s)
+[ep 144 step 112400] loss=0.0473 lr=2.00e-04 (2.8 step/s)
+[ep 144 step 112500] loss=0.0371 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_112500.png
+[ep 144 step 112600] loss=0.0468 lr=2.00e-04 (2.8 step/s)
+[ep 144 step 112700] loss=0.0323 lr=2.00e-04 (2.8 step/s)
+[ep 144 step 112800] loss=0.0450 lr=2.00e-04 (2.8 step/s)
+[ep 144 step 112900] loss=0.0218 lr=2.00e-04 (2.8 step/s)
+[ep 144 step 113000] loss=0.0259 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 144 step 113100] loss=0.0350 lr=2.00e-04 (2.8 step/s)
+[ep 145 step 113200] loss=0.0356 lr=2.00e-04 (2.8 step/s)
+[ep 145 step 113300] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+[ep 145 step 113400] loss=0.0209 lr=2.00e-04 (2.8 step/s)
+[ep 145 step 113500] loss=0.0427 lr=2.00e-04 (2.8 step/s)
+[ep 145 step 113600] loss=0.0314 lr=2.00e-04 (2.8 step/s)
+[ep 145 step 113700] loss=0.0327 lr=2.00e-04 (2.8 step/s)
+[ep 145 step 113800] loss=0.0383 lr=2.00e-04 (2.8 step/s)
+[ep 146 step 113900] loss=0.0227 lr=2.00e-04 (2.8 step/s)
+[ep 146 step 114000] loss=0.0293 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 146 step 114100] loss=0.0146 lr=2.00e-04 (2.8 step/s)
+[ep 146 step 114200] loss=0.0302 lr=2.00e-04 (2.8 step/s)
+[ep 146 step 114300] loss=0.0446 lr=2.00e-04 (2.8 step/s)
+[ep 146 step 114400] loss=0.0404 lr=2.00e-04 (2.8 step/s)
+[ep 146 step 114500] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+[ep 146 step 114600] loss=0.0377 lr=2.00e-04 (2.8 step/s)
+[ep 147 step 114700] loss=0.0284 lr=2.00e-04 (2.8 step/s)
+[ep 147 step 114800] loss=0.0212 lr=2.00e-04 (2.8 step/s)
+[ep 147 step 114900] loss=0.0190 lr=2.00e-04 (2.8 step/s)
+[ep 147 step 115000] loss=0.0373 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_115000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 147 step 115100] loss=0.0257 lr=2.00e-04 (2.8 step/s)
+[ep 147 step 115200] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+[ep 147 step 115300] loss=0.0257 lr=2.00e-04 (2.8 step/s)
+[ep 147 step 115400] loss=0.0479 lr=2.00e-04 (2.8 step/s)
+[ep 148 step 115500] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+[ep 148 step 115600] loss=0.0325 lr=2.00e-04 (2.8 step/s)
+[ep 148 step 115700] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+[ep 148 step 115800] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+[ep 148 step 115900] loss=0.0466 lr=2.00e-04 (2.8 step/s)
+[ep 148 step 116000] loss=0.0188 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 148 step 116100] loss=0.0368 lr=2.00e-04 (2.8 step/s)
+[ep 148 step 116200] loss=0.0321 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 116300] loss=0.0310 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 116400] loss=0.0301 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 116500] loss=0.0406 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 116600] loss=0.0246 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 116700] loss=0.0323 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 116800] loss=0.0238 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 116900] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+[ep 149 step 117000] loss=0.0292 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 150 step 117100] loss=0.0342 lr=2.00e-04 (2.8 step/s)
+[ep 150 step 117200] loss=0.0311 lr=2.00e-04 (2.8 step/s)
+[ep 150 step 117300] loss=0.0376 lr=2.00e-04 (2.8 step/s)
+[ep 150 step 117400] loss=0.0302 lr=2.00e-04 (2.8 step/s)
+[ep 150 step 117500] loss=0.0212 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_117500.png
+[ep 150 step 117600] loss=0.0254 lr=2.00e-04 (2.8 step/s)
+[ep 150 step 117700] loss=0.0162 lr=2.00e-04 (2.8 step/s)
+[ep 151 step 117800] loss=0.0314 lr=2.00e-04 (2.8 step/s)
+[ep 151 step 117900] loss=0.0298 lr=2.00e-04 (2.8 step/s)
+[ep 151 step 118000] loss=0.0302 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 151 step 118100] loss=0.0196 lr=2.00e-04 (2.8 step/s)
+[ep 151 step 118200] loss=0.0352 lr=2.00e-04 (2.8 step/s)
+[ep 151 step 118300] loss=0.0282 lr=2.00e-04 (2.8 step/s)
+[ep 151 step 118400] loss=0.0272 lr=2.00e-04 (2.8 step/s)
+[ep 151 step 118500] loss=0.0277 lr=2.00e-04 (2.8 step/s)
+[ep 152 step 118600] loss=0.0262 lr=2.00e-04 (2.8 step/s)
+[ep 152 step 118700] loss=0.0359 lr=2.00e-04 (2.8 step/s)
+[ep 152 step 118800] loss=0.0201 lr=2.00e-04 (2.8 step/s)
+[ep 152 step 118900] loss=0.0211 lr=2.00e-04 (2.8 step/s)
+[ep 152 step 119000] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 152 step 119100] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+[ep 152 step 119200] loss=0.0239 lr=2.00e-04 (2.8 step/s)
+[ep 152 step 119300] loss=0.0375 lr=2.00e-04 (2.8 step/s)
+[ep 153 step 119400] loss=0.0276 lr=2.00e-04 (2.8 step/s)
+[ep 153 step 119500] loss=0.0289 lr=2.00e-04 (2.8 step/s)
+[ep 153 step 119600] loss=0.0171 lr=2.00e-04 (2.8 step/s)
+[ep 153 step 119700] loss=0.0239 lr=2.00e-04 (2.8 step/s)
+[ep 153 step 119800] loss=0.0372 lr=2.00e-04 (2.8 step/s)
+[ep 153 step 119900] loss=0.0194 lr=2.00e-04 (2.8 step/s)
+[ep 153 step 120000] loss=0.0324 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_120000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_120000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_060000.pt
+[ep 153 step 120100] loss=0.0360 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120200] loss=0.0457 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120300] loss=0.0314 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120400] loss=0.0281 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120500] loss=0.0235 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120600] loss=0.0232 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120700] loss=0.0231 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120800] loss=0.0371 lr=2.00e-04 (2.8 step/s)
+[ep 154 step 120900] loss=0.0417 lr=2.00e-04 (2.8 step/s)
+[ep 155 step 121000] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 155 step 121100] loss=0.0272 lr=2.00e-04 (2.8 step/s)
+[ep 155 step 121200] loss=0.0249 lr=2.00e-04 (2.8 step/s)
+[ep 155 step 121300] loss=0.0275 lr=2.00e-04 (2.8 step/s)
+[ep 155 step 121400] loss=0.0335 lr=2.00e-04 (2.8 step/s)
+[ep 155 step 121500] loss=0.0290 lr=2.00e-04 (2.8 step/s)
+[ep 155 step 121600] loss=0.0196 lr=2.00e-04 (2.8 step/s)
+[ep 156 step 121700] loss=0.0240 lr=2.00e-04 (2.8 step/s)
+[ep 156 step 121800] loss=0.0263 lr=2.00e-04 (2.8 step/s)
+[ep 156 step 121900] loss=0.0265 lr=2.00e-04 (2.8 step/s)
+[ep 156 step 122000] loss=0.0209 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 156 step 122100] loss=0.0306 lr=2.00e-04 (2.8 step/s)
+[ep 156 step 122200] loss=0.0163 lr=2.00e-04 (2.8 step/s)
+[ep 156 step 122300] loss=0.0220 lr=2.00e-04 (2.8 step/s)
+[ep 156 step 122400] loss=0.0246 lr=2.00e-04 (2.8 step/s)
+[ep 157 step 122500] loss=0.0407 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_122500.png
+[ep 157 step 122600] loss=0.0272 lr=2.00e-04 (2.8 step/s)
+[ep 157 step 122700] loss=0.0308 lr=2.00e-04 (2.8 step/s)
+[ep 157 step 122800] loss=0.0310 lr=2.00e-04 (2.8 step/s)
+[ep 157 step 122900] loss=0.0270 lr=2.00e-04 (2.8 step/s)
+[ep 157 step 123000] loss=0.0235 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 157 step 123100] loss=0.0195 lr=2.00e-04 (2.8 step/s)
+[ep 157 step 123200] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 123300] loss=0.0263 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 123400] loss=0.0323 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 123500] loss=0.0184 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 123600] loss=0.0241 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 123700] loss=0.0218 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 123800] loss=0.0217 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 123900] loss=0.0225 lr=2.00e-04 (2.8 step/s)
+[ep 158 step 124000] loss=0.0445 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 159 step 124100] loss=0.0210 lr=2.00e-04 (2.8 step/s)
+[ep 159 step 124200] loss=0.0248 lr=2.00e-04 (2.8 step/s)
+[ep 159 step 124300] loss=0.0423 lr=2.00e-04 (2.8 step/s)
+[ep 159 step 124400] loss=0.0292 lr=2.00e-04 (2.8 step/s)
+[ep 159 step 124500] loss=0.0373 lr=2.00e-04 (2.8 step/s)
+[ep 159 step 124600] loss=0.0139 lr=2.00e-04 (2.8 step/s)
+[ep 159 step 124700] loss=0.0440 lr=2.00e-04 (2.8 step/s)
+[ep 159 step 124800] loss=0.0344 lr=2.00e-04 (2.8 step/s)
+[ep 160 step 124900] loss=0.0329 lr=2.00e-04 (2.8 step/s)
+[ep 160 step 125000] loss=0.0241 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_125000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 160 step 125100] loss=0.0438 lr=2.00e-04 (2.8 step/s)
+[ep 160 step 125200] loss=0.0273 lr=2.00e-04 (2.8 step/s)
+[ep 160 step 125300] loss=0.0357 lr=2.00e-04 (2.8 step/s)
+[ep 160 step 125400] loss=0.0258 lr=2.00e-04 (2.8 step/s)
+[ep 160 step 125500] loss=0.0259 lr=2.00e-04 (2.8 step/s)
+[ep 160 step 125600] loss=0.0211 lr=2.00e-04 (2.8 step/s)
+[ep 161 step 125700] loss=0.0457 lr=2.00e-04 (2.8 step/s)
+[ep 161 step 125800] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 161 step 125900] loss=0.0211 lr=2.00e-04 (2.8 step/s)
+[ep 161 step 126000] loss=0.0444 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 161 step 126100] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+[ep 161 step 126200] loss=0.0464 lr=2.00e-04 (2.8 step/s)
+[ep 161 step 126300] loss=0.0146 lr=2.00e-04 (2.8 step/s)
+[ep 162 step 126400] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+[ep 162 step 126500] loss=0.0181 lr=2.00e-04 (2.8 step/s)
+[ep 162 step 126600] loss=0.0277 lr=2.00e-04 (2.8 step/s)
+[ep 162 step 126700] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 162 step 126800] loss=0.0265 lr=2.00e-04 (2.8 step/s)
+[ep 162 step 126900] loss=0.0192 lr=2.00e-04 (2.8 step/s)
+[ep 162 step 127000] loss=0.0140 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 162 step 127100] loss=0.0377 lr=2.00e-04 (2.8 step/s)
+[ep 163 step 127200] loss=0.0328 lr=2.00e-04 (2.8 step/s)
+[ep 163 step 127300] loss=0.0272 lr=2.00e-04 (2.8 step/s)
+[ep 163 step 127400] loss=0.0179 lr=2.00e-04 (2.8 step/s)
+[ep 163 step 127500] loss=0.0318 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_127500.png
+[ep 163 step 127600] loss=0.0257 lr=2.00e-04 (2.8 step/s)
+[ep 163 step 127700] loss=0.0244 lr=2.00e-04 (2.8 step/s)
+[ep 163 step 127800] loss=0.0369 lr=2.00e-04 (2.8 step/s)
+[ep 163 step 127900] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 164 step 128000] loss=0.0295 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 164 step 128100] loss=0.0223 lr=2.00e-04 (2.8 step/s)
+[ep 164 step 128200] loss=0.0265 lr=2.00e-04 (2.8 step/s)
+[ep 164 step 128300] loss=0.0357 lr=2.00e-04 (2.8 step/s)
+[ep 164 step 128400] loss=0.0306 lr=2.00e-04 (2.8 step/s)
+[ep 164 step 128500] loss=0.0266 lr=2.00e-04 (2.8 step/s)
+[ep 164 step 128600] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+[ep 164 step 128700] loss=0.0205 lr=2.00e-04 (2.8 step/s)
+[ep 165 step 128800] loss=0.0354 lr=2.00e-04 (2.8 step/s)
+[ep 165 step 128900] loss=0.0321 lr=2.00e-04 (2.8 step/s)
+[ep 165 step 129000] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 165 step 129100] loss=0.0261 lr=2.00e-04 (2.8 step/s)
+[ep 165 step 129200] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+[ep 165 step 129300] loss=0.0281 lr=2.00e-04 (2.8 step/s)
+[ep 165 step 129400] loss=0.0380 lr=2.00e-04 (2.8 step/s)
+[ep 165 step 129500] loss=0.0313 lr=2.00e-04 (2.8 step/s)
+[ep 166 step 129600] loss=0.0325 lr=2.00e-04 (2.8 step/s)
+[ep 166 step 129700] loss=0.0201 lr=2.00e-04 (2.8 step/s)
+[ep 166 step 129800] loss=0.0401 lr=2.00e-04 (2.8 step/s)
+[ep 166 step 129900] loss=0.0409 lr=2.00e-04 (2.8 step/s)
+[ep 166 step 130000] loss=0.0296 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_130000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_130000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_070000.pt
+[ep 166 step 130100] loss=0.0260 lr=2.00e-04 (2.8 step/s)
+[ep 166 step 130200] loss=0.0318 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 130300] loss=0.0298 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 130400] loss=0.0230 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 130500] loss=0.0271 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 130600] loss=0.0501 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 130700] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 130800] loss=0.0158 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 130900] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+[ep 167 step 131000] loss=0.0288 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 168 step 131100] loss=0.0220 lr=2.00e-04 (2.8 step/s)
+[ep 168 step 131200] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+[ep 168 step 131300] loss=0.0328 lr=2.00e-04 (2.8 step/s)
+[ep 168 step 131400] loss=0.0447 lr=2.00e-04 (2.8 step/s)
+[ep 168 step 131500] loss=0.0196 lr=2.00e-04 (2.8 step/s)
+[ep 168 step 131600] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+[ep 168 step 131700] loss=0.0292 lr=2.00e-04 (2.8 step/s)
+[ep 168 step 131800] loss=0.0152 lr=2.00e-04 (2.8 step/s)
+[ep 169 step 131900] loss=0.0203 lr=2.00e-04 (2.8 step/s)
+[ep 169 step 132000] loss=0.0248 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 169 step 132100] loss=0.0245 lr=2.00e-04 (2.8 step/s)
+[ep 169 step 132200] loss=0.0334 lr=2.00e-04 (2.8 step/s)
+[ep 169 step 132300] loss=0.0481 lr=2.00e-04 (2.8 step/s)
+[ep 169 step 132400] loss=0.0278 lr=2.00e-04 (2.8 step/s)
+[ep 169 step 132500] loss=0.0276 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_132500.png
+[ep 169 step 132600] loss=0.0566 lr=2.00e-04 (2.8 step/s)
+[ep 170 step 132700] loss=0.0249 lr=2.00e-04 (2.8 step/s)
+[ep 170 step 132800] loss=0.0219 lr=2.00e-04 (2.8 step/s)
+[ep 170 step 132900] loss=0.0345 lr=2.00e-04 (2.8 step/s)
+[ep 170 step 133000] loss=0.0133 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 170 step 133100] loss=0.0264 lr=2.00e-04 (2.8 step/s)
+[ep 170 step 133200] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+[ep 170 step 133300] loss=0.0234 lr=2.00e-04 (2.8 step/s)
+[ep 170 step 133400] loss=0.0227 lr=2.00e-04 (2.8 step/s)
+[ep 171 step 133500] loss=0.0282 lr=2.00e-04 (2.8 step/s)
+[ep 171 step 133600] loss=0.0137 lr=2.00e-04 (2.8 step/s)
+[ep 171 step 133700] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 171 step 133800] loss=0.0158 lr=2.00e-04 (2.8 step/s)
+[ep 171 step 133900] loss=0.0265 lr=2.00e-04 (2.8 step/s)
+[ep 171 step 134000] loss=0.0278 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 171 step 134100] loss=0.0244 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134200] loss=0.0340 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134300] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134400] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134500] loss=0.0289 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134600] loss=0.0343 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134700] loss=0.0266 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134800] loss=0.0427 lr=2.00e-04 (2.8 step/s)
+[ep 172 step 134900] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 173 step 135000] loss=0.0273 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_135000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 173 step 135100] loss=0.0414 lr=2.00e-04 (2.8 step/s)
+[ep 173 step 135200] loss=0.0367 lr=2.00e-04 (2.8 step/s)
+[ep 173 step 135300] loss=0.0313 lr=2.00e-04 (2.8 step/s)
+[ep 173 step 135400] loss=0.0327 lr=2.00e-04 (2.8 step/s)
+[ep 173 step 135500] loss=0.0169 lr=2.00e-04 (2.8 step/s)
+[ep 173 step 135600] loss=0.0286 lr=2.00e-04 (2.8 step/s)
+[ep 173 step 135700] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 174 step 135800] loss=0.0398 lr=2.00e-04 (2.8 step/s)
+[ep 174 step 135900] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+[ep 174 step 136000] loss=0.0416 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 174 step 136100] loss=0.0471 lr=2.00e-04 (2.8 step/s)
+[ep 174 step 136200] loss=0.0227 lr=2.00e-04 (2.8 step/s)
+[ep 174 step 136300] loss=0.0277 lr=2.00e-04 (2.8 step/s)
+[ep 174 step 136400] loss=0.0391 lr=2.00e-04 (2.8 step/s)
+[ep 174 step 136500] loss=0.0383 lr=2.00e-04 (2.8 step/s)
+[ep 175 step 136600] loss=0.0220 lr=2.00e-04 (2.8 step/s)
+[ep 175 step 136700] loss=0.0372 lr=2.00e-04 (2.8 step/s)
+[ep 175 step 136800] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 175 step 136900] loss=0.0223 lr=2.00e-04 (2.8 step/s)
+[ep 175 step 137000] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 175 step 137100] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+[ep 175 step 137200] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+[ep 175 step 137300] loss=0.0375 lr=2.00e-04 (2.8 step/s)
+[ep 176 step 137400] loss=0.0482 lr=2.00e-04 (2.8 step/s)
+[ep 176 step 137500] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_137500.png
+[ep 176 step 137600] loss=0.0355 lr=2.00e-04 (2.8 step/s)
+[ep 176 step 137700] loss=0.0554 lr=2.00e-04 (2.8 step/s)
+[ep 176 step 137800] loss=0.0237 lr=2.00e-04 (2.8 step/s)
+[ep 176 step 137900] loss=0.0315 lr=2.00e-04 (2.8 step/s)
+[ep 176 step 138000] loss=0.0443 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 176 step 138100] loss=0.0243 lr=2.00e-04 (2.8 step/s)
+[ep 177 step 138200] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 177 step 138300] loss=0.0368 lr=2.00e-04 (2.8 step/s)
+[ep 177 step 138400] loss=0.0371 lr=2.00e-04 (2.8 step/s)
+[ep 177 step 138500] loss=0.0357 lr=2.00e-04 (2.8 step/s)
+[ep 177 step 138600] loss=0.0299 lr=2.00e-04 (2.8 step/s)
+[ep 177 step 138700] loss=0.0308 lr=2.00e-04 (2.8 step/s)
+[ep 177 step 138800] loss=0.0382 lr=2.00e-04 (2.8 step/s)
+[ep 178 step 138900] loss=0.0216 lr=2.00e-04 (2.8 step/s)
+[ep 178 step 139000] loss=0.0388 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 178 step 139100] loss=0.0178 lr=2.00e-04 (2.8 step/s)
+[ep 178 step 139200] loss=0.0234 lr=2.00e-04 (2.8 step/s)
+[ep 178 step 139300] loss=0.0401 lr=2.00e-04 (2.8 step/s)
+[ep 178 step 139400] loss=0.0422 lr=2.00e-04 (2.8 step/s)
+[ep 178 step 139500] loss=0.0253 lr=2.00e-04 (2.8 step/s)
+[ep 178 step 139600] loss=0.0280 lr=2.00e-04 (2.8 step/s)
+[ep 179 step 139700] loss=0.0326 lr=2.00e-04 (2.8 step/s)
+[ep 179 step 139800] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 179 step 139900] loss=0.0315 lr=2.00e-04 (2.8 step/s)
+[ep 179 step 140000] loss=0.0287 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_140000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_140000.pt
+[ep 179 step 140100] loss=0.0208 lr=2.00e-04 (2.8 step/s)
+[ep 179 step 140200] loss=0.0352 lr=2.00e-04 (2.8 step/s)
+[ep 179 step 140300] loss=0.0321 lr=2.00e-04 (2.8 step/s)
+[ep 179 step 140400] loss=0.0181 lr=2.00e-04 (2.8 step/s)
+[ep 180 step 140500] loss=0.0235 lr=2.00e-04 (2.8 step/s)
+[ep 180 step 140600] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+[ep 180 step 140700] loss=0.0518 lr=2.00e-04 (2.8 step/s)
+[ep 180 step 140800] loss=0.0289 lr=2.00e-04 (2.8 step/s)
+[ep 180 step 140900] loss=0.0234 lr=2.00e-04 (2.8 step/s)
+[ep 180 step 141000] loss=0.0302 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 180 step 141100] loss=0.0233 lr=2.00e-04 (2.8 step/s)
+[ep 180 step 141200] loss=0.0323 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 141300] loss=0.0261 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 141400] loss=0.0292 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 141500] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 141600] loss=0.0300 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 141700] loss=0.0266 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 141800] loss=0.0317 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 141900] loss=0.0328 lr=2.00e-04 (2.8 step/s)
+[ep 181 step 142000] loss=0.0247 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 182 step 142100] loss=0.0256 lr=2.00e-04 (2.8 step/s)
+[ep 182 step 142200] loss=0.0288 lr=2.00e-04 (2.8 step/s)
+[ep 182 step 142300] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 182 step 142400] loss=0.0188 lr=2.00e-04 (2.8 step/s)
+[ep 182 step 142500] loss=0.0186 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_142500.png
+[ep 182 step 142600] loss=0.0256 lr=2.00e-04 (2.8 step/s)
+[ep 182 step 142700] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+[ep 183 step 142800] loss=0.0355 lr=2.00e-04 (2.8 step/s)
+[ep 183 step 142900] loss=0.0272 lr=2.00e-04 (2.8 step/s)
+[ep 183 step 143000] loss=0.0314 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 183 step 143100] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+[ep 183 step 143200] loss=0.0227 lr=2.00e-04 (2.8 step/s)
+[ep 183 step 143300] loss=0.0126 lr=2.00e-04 (2.8 step/s)
+[ep 183 step 143400] loss=0.0144 lr=2.00e-04 (2.8 step/s)
+[ep 183 step 143500] loss=0.0421 lr=2.00e-04 (2.8 step/s)
+[ep 184 step 143600] loss=0.0266 lr=2.00e-04 (2.8 step/s)
+[ep 184 step 143700] loss=0.0336 lr=2.00e-04 (2.8 step/s)
+[ep 184 step 143800] loss=0.0238 lr=2.00e-04 (2.8 step/s)
+[ep 184 step 143900] loss=0.0357 lr=2.00e-04 (2.8 step/s)
+[ep 184 step 144000] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 184 step 144100] loss=0.0281 lr=2.00e-04 (2.8 step/s)
+[ep 184 step 144200] loss=0.0342 lr=2.00e-04 (2.8 step/s)
+[ep 184 step 144300] loss=0.0248 lr=2.00e-04 (2.8 step/s)
+[ep 185 step 144400] loss=0.0327 lr=2.00e-04 (2.8 step/s)
+[ep 185 step 144500] loss=0.0322 lr=2.00e-04 (2.8 step/s)
+[ep 185 step 144600] loss=0.0262 lr=2.00e-04 (2.8 step/s)
+[ep 185 step 144700] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+[ep 185 step 144800] loss=0.0231 lr=2.00e-04 (2.8 step/s)
+[ep 185 step 144900] loss=0.0274 lr=2.00e-04 (2.8 step/s)
+[ep 185 step 145000] loss=0.0259 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_145000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 185 step 145100] loss=0.0235 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145200] loss=0.0215 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145300] loss=0.0362 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145400] loss=0.0374 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145500] loss=0.0197 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145600] loss=0.0302 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145700] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145800] loss=0.0255 lr=2.00e-04 (2.8 step/s)
+[ep 186 step 145900] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+[ep 187 step 146000] loss=0.0322 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 187 step 146100] loss=0.0361 lr=2.00e-04 (2.8 step/s)
+[ep 187 step 146200] loss=0.0216 lr=2.00e-04 (2.8 step/s)
+[ep 187 step 146300] loss=0.0206 lr=2.00e-04 (2.8 step/s)
+[ep 187 step 146400] loss=0.0304 lr=2.00e-04 (2.8 step/s)
+[ep 187 step 146500] loss=0.0270 lr=2.00e-04 (2.8 step/s)
+[ep 187 step 146600] loss=0.0301 lr=2.00e-04 (2.8 step/s)
+[ep 188 step 146700] loss=0.0265 lr=2.00e-04 (2.8 step/s)
+[ep 188 step 146800] loss=0.0191 lr=2.00e-04 (2.8 step/s)
+[ep 188 step 146900] loss=0.0428 lr=2.00e-04 (2.8 step/s)
+[ep 188 step 147000] loss=0.0181 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 188 step 147100] loss=0.0433 lr=2.00e-04 (2.8 step/s)
+[ep 188 step 147200] loss=0.0187 lr=2.00e-04 (2.8 step/s)
+[ep 188 step 147300] loss=0.0429 lr=2.00e-04 (2.8 step/s)
+[ep 188 step 147400] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+[ep 189 step 147500] loss=0.0207 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_147500.png
+[ep 189 step 147600] loss=0.0116 lr=2.00e-04 (2.8 step/s)
+[ep 189 step 147700] loss=0.0151 lr=2.00e-04 (2.8 step/s)
+[ep 189 step 147800] loss=0.0297 lr=2.00e-04 (2.8 step/s)
+[ep 189 step 147900] loss=0.0271 lr=2.00e-04 (2.8 step/s)
+[ep 189 step 148000] loss=0.0307 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 189 step 148100] loss=0.0371 lr=2.00e-04 (2.8 step/s)
+[ep 189 step 148200] loss=0.0335 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 148300] loss=0.0258 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 148400] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 148500] loss=0.0239 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 148600] loss=0.0353 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 148700] loss=0.0227 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 148800] loss=0.0170 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 148900] loss=0.0331 lr=2.00e-04 (2.8 step/s)
+[ep 190 step 149000] loss=0.0224 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 191 step 149100] loss=0.0342 lr=2.00e-04 (2.8 step/s)
+[ep 191 step 149200] loss=0.0405 lr=2.00e-04 (2.8 step/s)
+[ep 191 step 149300] loss=0.0320 lr=2.00e-04 (2.8 step/s)
+[ep 191 step 149400] loss=0.0184 lr=2.00e-04 (2.8 step/s)
+[ep 191 step 149500] loss=0.0344 lr=2.00e-04 (2.8 step/s)
+[ep 191 step 149600] loss=0.0345 lr=2.00e-04 (2.8 step/s)
+[ep 191 step 149700] loss=0.0210 lr=2.00e-04 (2.8 step/s)
+[ep 191 step 149800] loss=0.0277 lr=2.00e-04 (2.8 step/s)
+[ep 192 step 149900] loss=0.0270 lr=2.00e-04 (2.8 step/s)
+[ep 192 step 150000] loss=0.0344 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_150000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_150000.pt
+  [ckpt] removed old checkpoint: runs\exp_cifar10_baseline\ckpt\step_080000.pt
+[ep 192 step 150100] loss=0.0512 lr=2.00e-04 (2.8 step/s)
+[ep 192 step 150200] loss=0.0211 lr=2.00e-04 (2.8 step/s)
+[ep 192 step 150300] loss=0.0316 lr=2.00e-04 (2.8 step/s)
+[ep 192 step 150400] loss=0.0354 lr=2.00e-04 (2.8 step/s)
+[ep 192 step 150500] loss=0.0405 lr=2.00e-04 (2.8 step/s)
+[ep 193 step 150600] loss=0.0235 lr=2.00e-04 (2.8 step/s)
+[ep 193 step 150700] loss=0.0294 lr=2.00e-04 (2.8 step/s)
+[ep 193 step 150800] loss=0.0398 lr=2.00e-04 (2.8 step/s)
+[ep 193 step 150900] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 193 step 151000] loss=0.0241 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 193 step 151100] loss=0.0368 lr=2.00e-04 (2.8 step/s)
+[ep 193 step 151200] loss=0.0249 lr=2.00e-04 (2.8 step/s)
+[ep 193 step 151300] loss=0.0377 lr=2.00e-04 (2.8 step/s)
+[ep 194 step 151400] loss=0.0220 lr=2.00e-04 (2.8 step/s)
+[ep 194 step 151500] loss=0.0290 lr=2.00e-04 (2.8 step/s)
+[ep 194 step 151600] loss=0.0338 lr=2.00e-04 (2.8 step/s)
+[ep 194 step 151700] loss=0.0403 lr=2.00e-04 (2.8 step/s)
+[ep 194 step 151800] loss=0.0303 lr=2.00e-04 (2.8 step/s)
+[ep 194 step 151900] loss=0.0384 lr=2.00e-04 (2.8 step/s)
+[ep 194 step 152000] loss=0.0309 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 194 step 152100] loss=0.0271 lr=2.00e-04 (2.8 step/s)
+[ep 195 step 152200] loss=0.0240 lr=2.00e-04 (2.8 step/s)
+[ep 195 step 152300] loss=0.0356 lr=2.00e-04 (2.8 step/s)
+[ep 195 step 152400] loss=0.0303 lr=2.00e-04 (2.8 step/s)
+[ep 195 step 152500] loss=0.0403 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_152500.png
+[ep 195 step 152600] loss=0.0364 lr=2.00e-04 (2.8 step/s)
+[ep 195 step 152700] loss=0.0467 lr=2.00e-04 (2.8 step/s)
+[ep 195 step 152800] loss=0.0429 lr=2.00e-04 (2.8 step/s)
+[ep 195 step 152900] loss=0.0176 lr=2.00e-04 (2.8 step/s)
+[ep 196 step 153000] loss=0.0169 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 196 step 153100] loss=0.0314 lr=2.00e-04 (2.8 step/s)
+[ep 196 step 153200] loss=0.0378 lr=2.00e-04 (2.8 step/s)
+[ep 196 step 153300] loss=0.0331 lr=2.00e-04 (2.8 step/s)
+[ep 196 step 153400] loss=0.0208 lr=2.00e-04 (2.8 step/s)
+[ep 196 step 153500] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+[ep 196 step 153600] loss=0.0297 lr=2.00e-04 (2.8 step/s)
+[ep 196 step 153700] loss=0.0315 lr=2.00e-04 (2.8 step/s)
+[ep 197 step 153800] loss=0.0210 lr=2.00e-04 (2.8 step/s)
+[ep 197 step 153900] loss=0.0299 lr=2.00e-04 (2.8 step/s)
+[ep 197 step 154000] loss=0.0361 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 197 step 154100] loss=0.0274 lr=2.00e-04 (2.8 step/s)
+[ep 197 step 154200] loss=0.0434 lr=2.00e-04 (2.8 step/s)
+[ep 197 step 154300] loss=0.0231 lr=2.00e-04 (2.8 step/s)
+[ep 197 step 154400] loss=0.0306 lr=2.00e-04 (2.8 step/s)
+[ep 197 step 154500] loss=0.0288 lr=2.00e-04 (2.8 step/s)
+[ep 198 step 154600] loss=0.0218 lr=2.00e-04 (2.8 step/s)
+[ep 198 step 154700] loss=0.0267 lr=2.00e-04 (2.8 step/s)
+[ep 198 step 154800] loss=0.0327 lr=2.00e-04 (2.8 step/s)
+[ep 198 step 154900] loss=0.0401 lr=2.00e-04 (2.8 step/s)
+[ep 198 step 155000] loss=0.0243 lr=2.00e-04 (2.8 step/s)
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_155000.png
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+[ep 198 step 155100] loss=0.0317 lr=2.00e-04 (2.8 step/s)
+[ep 198 step 155200] loss=0.0288 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 155300] loss=0.0229 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 155400] loss=0.0259 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 155500] loss=0.0202 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 155600] loss=0.0181 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 155700] loss=0.0425 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 155800] loss=0.0365 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 155900] loss=0.0330 lr=2.00e-04 (2.8 step/s)
+[ep 199 step 156000] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+  [plot] curves saved to runs\exp_cifar10_baseline\training_curves.png
+
+[done] Final checkpoint saved to runs\exp_cifar10_baseline\ckpt\final.pt
+[done] Total training time: 568.7 min
+[done] Peak GPU memory usage: 4.21 GB
+[plot] Final curves saved to runs\exp_cifar10_baseline\training_curves_final.png

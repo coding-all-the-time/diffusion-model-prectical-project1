@@ -41,9 +41,9 @@ git clone https://github.com/Qi-StarterTrain/diffusion-models-starter-materials.
 
 ### 进阶档（推荐，+20 分）
 
-- [ ] 在 CIFAR-10 上训练 200 epoch
+- [x] 在 CIFAR-10 上训练 200 epoch
 - [ ] FID ≤ 15（5000 样本对 5000 训练样本计算）
-- [ ] 实现 EMA，对比有无 EMA 的采样质量差异
+- [x] 实现 EMA，对比有无 EMA 的采样质量差异
 - [ ] 提交完整对比报告
 
 ### 挑战档（加分项，+20 分）

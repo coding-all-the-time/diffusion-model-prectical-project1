@@ -1,0 +1,22 @@
+2026-05-27 13:04:51,437 INFO    MainThread:30904 [wandb_setup.py:_flush():81] Current SDK version is 0.26.1
+2026-05-27 13:04:51,437 INFO    MainThread:30904 [wandb_setup.py:_flush():81] Configure stats pid to 30904
+2026-05-27 13:04:51,437 INFO    MainThread:30904 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-05-27 13:04:51,437 INFO    MainThread:30904 [wandb_init.py:setup_run_log_directory():723] Logging user logs to D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\wandb\run-20260527_130451-qsvhdus3\logs\debug.log
+2026-05-27 13:04:51,437 INFO    MainThread:30904 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\wandb\run-20260527_130451-qsvhdus3\logs\debug-internal.log
+2026-05-27 13:04:51,438 INFO    MainThread:30904 [wandb_init.py:init():850] calling init triggers
+2026-05-27 13:04:51,438 INFO    MainThread:30904 [wandb_init.py:init():855] wandb.init called with sweep_config: {}
+config: {'output_dir': 'runs/exp_cifar10_baseline', 'seed': 42, 'dataset': {'name': 'cifar10', 'batch_size': 64, 'image_size': 32, 'num_workers': 4, 'root': './data'}, 'model': {'in_channels': 3, 'out_channels': 3, 'base_channels': 128, 'channel_mult': [1, 2, 2, 2], 'num_res_blocks': 2, 'attn_resolutions': [16], 'dropout': 0.1, 'image_size': 32}, 'diffusion': {'T': 1000, 'beta_schedule': 'linear', 'beta_start': 0.0001, 'beta_end': 0.02}, 'optimizer': {'lr': 0.0002, 'weight_decay': 0.0, 'warmup_steps': 5000}, 'ema_decay': 0.9999, 'mixed_precision': 'fp16', 'training': {'num_epochs': 200, 'log_every': 100, 'sample_every': 2500, 'ckpt_every': 10000, 'grad_clip': 1.0, 'max_keep_ckpts': 3}, 'wandb': {'enabled': True, 'project': 'ddpm-course', 'run_name': 'cifar10_linear_baseline'}, 'resume': 'runs/exp_cifar10_baseline/ckpt/step_060000.pt', '_wandb': {}}
+2026-05-27 13:04:51,438 INFO    MainThread:30904 [wandb_init.py:init():898] starting backend
+2026-05-27 13:04:51,788 INFO    MainThread:30904 [wandb_init.py:init():913] sending inform_init request
+2026-05-27 13:04:52,482 INFO    MainThread:30904 [wandb_init.py:init():918] backend started and connected
+2026-05-27 13:04:52,486 INFO    MainThread:30904 [wandb_init.py:init():988] updated telemetry
+2026-05-27 13:04:52,575 INFO    MainThread:30904 [wandb_init.py:init():1011] communicating run to backend with 90.0 second timeout
+2026-05-27 13:04:53,351 INFO    MainThread:30904 [wandb_init.py:init():1051] run resumed
+2026-05-27 13:04:53,353 INFO    MainThread:30904 [wandb_init.py:init():1056] starting run threads in backend
+2026-05-27 13:04:53,758 INFO    MainThread:30904 [wandb_run.py:_console_start():2554] atexit reg
+2026-05-27 13:04:53,759 INFO    MainThread:30904 [wandb_run.py:_redirect():2403] redirect: wrap_raw
+2026-05-27 13:04:53,759 INFO    MainThread:30904 [wandb_run.py:_redirect():2472] Wrapping output streams.
+2026-05-27 13:04:53,759 INFO    MainThread:30904 [wandb_run.py:_redirect():2495] Redirects installed.
+2026-05-27 13:04:53,763 INFO    MainThread:30904 [wandb_init.py:init():1094] run started, returning control to user process
+2026-05-27 14:04:58,510 INFO    wandb-AsyncioManager-main:30904 [service_client.py:_forward_responses():134] Reached EOF.
+2026-05-27 14:04:58,511 INFO    wandb-AsyncioManager-main:30904 [mailbox.py:close():155] Closing mailbox, abandoning 1 handles.

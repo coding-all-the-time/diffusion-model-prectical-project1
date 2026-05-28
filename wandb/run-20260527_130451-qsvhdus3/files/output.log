@@ -1,0 +1,215 @@
+[*] Restoring model and optimizer states...
+[train] Starting training for 200 epochs
+[ep 077 step 060100] loss=0.0325 lr=2.00e-04 (1.7 step/s)
+wandb: WARNING Tried to log to step 60100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060200] loss=0.0353 lr=2.00e-04 (2.1 step/s)
+wandb: WARNING Tried to log to step 60200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060300] loss=0.0341 lr=2.00e-04 (2.3 step/s)
+wandb: WARNING Tried to log to step 60300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060400] loss=0.0288 lr=2.00e-04 (2.4 step/s)
+wandb: WARNING Tried to log to step 60400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060500] loss=0.0380 lr=2.00e-04 (2.4 step/s)
+wandb: WARNING Tried to log to step 60500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060600] loss=0.0220 lr=2.00e-04 (2.5 step/s)
+wandb: WARNING Tried to log to step 60600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 077 step 060700] loss=0.0410 lr=2.00e-04 (2.5 step/s)
+wandb: WARNING Tried to log to step 60700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 060800] loss=0.0479 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 60800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 060900] loss=0.0338 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 60900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061000] loss=0.0228 lr=2.00e-04 (2.6 step/s)
+wandb: WARNING Tried to log to step 61000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061100] loss=0.0300 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061200] loss=0.0379 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061300] loss=0.0437 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061400] loss=0.0209 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 078 step 061500] loss=0.0268 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 61500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061600] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 61600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061700] loss=0.0251 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 61700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061800] loss=0.0250 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 61800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 061900] loss=0.0184 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 61900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062000] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 62000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062100] loss=0.0260 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 62100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062200] loss=0.0329 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 62200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 079 step 062300] loss=0.0281 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 62300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062400] loss=0.0286 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 62400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062500] loss=0.0291 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 62500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_062500.png
+[ep 080 step 062600] loss=0.0324 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062700] loss=0.0300 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062800] loss=0.0259 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 062900] loss=0.0409 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 62900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 063000] loss=0.0320 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 080 step 063100] loss=0.0301 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063200] loss=0.0375 lr=2.00e-04 (2.7 step/s)
+wandb: WARNING Tried to log to step 63200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063300] loss=0.0215 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 63300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063400] loss=0.0205 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 63400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063500] loss=0.0344 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 63500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063600] loss=0.0313 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 63600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063700] loss=0.0305 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 63700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063800] loss=0.0310 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 63800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 081 step 063900] loss=0.0246 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 63900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064000] loss=0.0280 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064100] loss=0.0442 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064200] loss=0.0288 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064300] loss=0.0392 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064400] loss=0.0416 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064500] loss=0.0157 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 082 step 064600] loss=0.0341 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 064700] loss=0.0271 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 064800] loss=0.0341 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 064900] loss=0.0289 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 64900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065000] loss=0.0318 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_065000.png
+[ep 083 step 065100] loss=0.0258 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065200] loss=0.0236 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065300] loss=0.0232 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 083 step 065400] loss=0.0245 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065500] loss=0.0331 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065600] loss=0.0358 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065700] loss=0.0341 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065800] loss=0.0294 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 065900] loss=0.0185 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 65900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 066000] loss=0.0308 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 066100] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 084 step 066200] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066300] loss=0.0333 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066400] loss=0.0247 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066500] loss=0.0380 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066600] loss=0.0269 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066700] loss=0.0256 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066800] loss=0.0303 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 066900] loss=0.0312 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 66900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 085 step 067000] loss=0.0318 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067100] loss=0.0249 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067200] loss=0.0314 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067300] loss=0.0319 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067400] loss=0.0391 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067500] loss=0.0257 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_067500.png
+[ep 086 step 067600] loss=0.0144 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067700] loss=0.0229 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 086 step 067800] loss=0.0266 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 067900] loss=0.0259 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 67900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068000] loss=0.0321 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068100] loss=0.0253 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068200] loss=0.0412 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068300] loss=0.0279 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068400] loss=0.0309 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 087 step 068500] loss=0.0150 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068600] loss=0.0252 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068700] loss=0.0463 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068800] loss=0.0353 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 068900] loss=0.0323 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 68900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069000] loss=0.0285 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069100] loss=0.0176 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69100 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069200] loss=0.0268 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69200 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 088 step 069300] loss=0.0251 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69300 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069400] loss=0.0244 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69400 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069500] loss=0.0253 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69500 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069600] loss=0.0295 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69600 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069700] loss=0.0296 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69700 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069800] loss=0.0351 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69800 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 069900] loss=0.0242 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 69900 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+[ep 089 step 070000] loss=0.0213 lr=2.00e-04 (2.8 step/s)
+wandb: WARNING Tried to log to step 70000 that is less than the current step 70001. Steps must be monotonically increasing, so this data will be ignored. See https://wandb.me/define-metric to log data out of order.
+  [sample] saved to runs\exp_cifar10_baseline\samples\step_070000.png
+  [ckpt] saved to runs\exp_cifar10_baseline\ckpt\step_070000.pt
+Traceback (most recent call last):
+  File "D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\train.py", line 435, in <module>
+    main()
+  File "D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\train.py", line 431, in main
+    train(cfg)
+  File "D:\Code\machine_learning\diffusion model\diffusion-model-prectical-project1\train.py", line 348, in train
+    saved_ckpts.append(ckpt_path)
+UnboundLocalError: local variable 'saved_ckpts' referenced before assignment

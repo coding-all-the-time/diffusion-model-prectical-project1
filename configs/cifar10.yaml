@@ -61,3 +61,9 @@ wandb:
   enabled: true             # 长时间训练强烈建议开启 wandb 监控
   project: ddpm-course
   run_name: cifar10_linear_baseline
+
+# ─────────── 绘图（可选） ───────────
+plotting:
+  enabled: true             
+  record_every: 50          
+  plot_every: 1000 

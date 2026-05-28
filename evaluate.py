@@ -8,10 +8,7 @@ DDPM 评估脚本：FID 计算
 
 用法：
     # 评估 checkpoint 上的 FID（生成 5000 张样本对比真实数据）
-    python evaluate.py \
-        --ckpt runs/exp_cifar10/ckpt/final.pt \
-        --num_samples 5000 \
-        --batch_size 64
+    python evaluate.py --ckpt runs/exp_cifar10/ckpt/final.pt --num_samples 5000 --batch_size 64
 """
 
 import argparse

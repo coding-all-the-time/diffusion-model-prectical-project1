@@ -51,7 +51,7 @@ class EMA:
         loss.backward(); optimizer.step()
         ema.update(model)
         # 采样时：
-        ema_model = ema.copy_to(model)
+        ema_model = ema.copy_to(model), 这个函数没有实现，实际上使用的是sample_model = ema.ema_model
         samples = sample(ema_model, ...)
     """
 
@@ -173,9 +173,6 @@ def train(cfg: Dict[str, Any]):
     ckpt_every = cfg['training'].get('ckpt_every', 5000)
     grad_clip = cfg['training'].get('grad_clip', 1.0)
 
-    # 设置最多保留的 checkpoint 数量，默认为 3
-    max_keep_ckpts = cfg['training'].get('max_keep_ckpts', 3)
-
     # ─────────── 绘图记录初始化 ───────────
     use_plotting = cfg.get('plotting', {}).get('enabled', False)
     if use_plotting:
@@ -184,16 +181,18 @@ def train(cfg: Dict[str, Any]):
         history_steps = []
         history_losses = []
         history_mems = []
-        # 自动扫描并排序历史遗留的 Checkpoint
-        ckpt_dir = output_dir / 'ckpt'
-        saved_ckpts = sorted(list(ckpt_dir.glob('step_*.pt')))
-        if len(saved_ckpts) > 0:
-            print(f"[*] 已扫描到文件夹中存在的 {len(saved_ckpts)} 个历史 Checkpoint")
 
     global_step = 0
     start_epoch = 0
     
     # ─────────── 恢复断点状态 ───────────
+    # 设置最多保留的 checkpoint 数量，默认为 3
+    max_keep_ckpts = cfg['training'].get('max_keep_ckpts', 3)
+    # 自动扫描并排序历史遗留的 Checkpoint
+    ckpt_dir = output_dir / 'ckpt'
+    saved_ckpts = sorted(list(ckpt_dir.glob('step_*.pt')))
+    if len(saved_ckpts) > 0:
+        print(f"[*] 已扫描到文件夹中存在的 {len(saved_ckpts)} 个历史 Checkpoint")
     if ckpt:
         print(f"[*] Restoring model and optimizer states...")
         model.load_state_dict(ckpt['model'])
@@ -207,8 +206,14 @@ def train(cfg: Dict[str, Any]):
         start_epoch = ckpt.get('epoch', 0) + 1  # 从中断的下一个 epoch 继续
         
         # 修复学习率调度器（避免恢复后由于内部 step 归零导致学习率重新 warmup 到 0）
-        if scheduler_lr is not None:
-            scheduler_lr.last_epoch = global_step
+        if scheduler_lr is not None and 'scheduler' in ckpt:
+            scheduler_lr.load_state_dict(ckpt['scheduler'])
+
+        # 恢复本地绘图
+        if use_plotting and 'history' in ckpt:
+            history_steps = ckpt['history']['steps']
+            history_losses = ckpt['history']['losses']
+            history_mems = ckpt['history']['mems']
 
     initial_step = global_step
     start_time = time.time()
@@ -333,6 +338,12 @@ def train(cfg: Dict[str, Any]):
                     'model': model.state_dict(),
                     'optimizer': optimizer.state_dict(),
                     'config': cfg,
+                    # 将绘图历史存入断点
+                    'history': {
+                        'steps': history_steps if use_plotting else [],
+                        'losses': history_losses if use_plotting else [],
+                        'mems': history_mems if use_plotting else []
+                    }
                 }
                 # 将当前 WandB 的 run_id 保存进断点中
                 if use_wandb and wandb.run is not None:
@@ -354,6 +365,10 @@ def train(cfg: Dict[str, Any]):
                             print(f"  [ckpt] removed old checkpoint: {old_ckpt}")
                         except Exception as e:
                             print(f"  [ckpt] warning: failed to remove {old_ckpt}: {e}")
+                
+                # 保存学习调度器
+                if scheduler_lr is not None:
+                    save_dict['scheduler'] = scheduler_lr.state_dict()
 
     # ─────────── 训练结束 ───────────
     final_ckpt = output_dir / 'ckpt' / 'final.pt'
