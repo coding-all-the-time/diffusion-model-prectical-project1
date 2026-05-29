@@ -1,0 +1,64 @@
+# CIFAR-10 DDPM Configuration（Cosine 进阶档）
+# 期望训练时长: ~15h on RTX 3060 6GB
+# 期望结果: 200 epoch 后 FID ≤ 15 (5000 samples)
+
+output_dir: runs/exp_cifar10_cosine
+seed: 42
+
+# ─────────── 数据 ───────────
+dataset:
+  name: cifar10
+  batch_size: 64 
+  image_size: 32
+  num_workers: 4
+  root: ./data
+
+# ─────────── 模型（标准 U-Net） ───────────
+model:
+  in_channels: 3
+  out_channels: 3
+  base_channels: 128         # CIFAR-10 标配
+  channel_mult: [1, 2, 2, 2] # 32 → 16 → 8 → 4 → 4
+  num_res_blocks: 2
+  attn_resolutions: [16]      # 16x16 加 self-attention
+  dropout: 0.1
+  image_size: 32
+
+# ─────────── Diffusion ───────────
+diffusion:
+  T: 1000
+  beta_schedule: cosine 
+  s: 0.008 
+
+# ─────────── Optimizer ───────────
+optimizer:
+  lr: 2.0e-4
+  weight_decay: 0.0
+  warmup_steps: 5000
+
+# ─────────── EMA ───────────
+ema_decay: 0.9999
+
+# ─────────── 混合精度 ───────────
+mixed_precision: fp16        # 保持开启 fp16 防止 OOM
+
+# ─────────── 训练循环 ───────────
+training:
+  num_epochs: 200
+  log_every: 100
+  sample_every: 2500
+  ckpt_every: 10000
+  grad_clip: 1.0
+  max_keep_ckpts: 3           # 最多保留最近的 3 个 checkpoint 节省硬盘
+
+# ─────────── WandB ───────────
+wandb:
+  enabled: true             
+  project: ddpm-course
+  run_name: cifar10_cosine
+
+# ─────────── 绘图（可选） ───────────
+plotting:
+  enabled: true             
+  record_every: 50          
+  plot_every: 1000

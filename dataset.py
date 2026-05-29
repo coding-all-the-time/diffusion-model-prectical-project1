@@ -12,6 +12,7 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 from torchvision import datasets, transforms
 import torchvision.transforms.functional as TF
+from tqdm import tqdm
 
 
 def get_transform(image_size: int, dataset_name: str = 'cifar10') -> Callable:
@@ -197,3 +198,35 @@ if __name__ == '__main__':
         
     except Exception as e:
         print(f"❌ CIFAR-10 测试失败: {e}\n")
+    
+    print("=== 开始全量检查 CIFAR-10 数据集是否存在异常样本 ===")
+    
+    try:
+        # 使用较大的 batch_size 加快扫描速度，不 drop_last 保证扫到最后一张图
+        loader_cifar = get_dataloader(
+            'cifar10', 
+            batch_size=256, 
+            num_workers=4, 
+            shuffle=False, 
+            drop_last=False
+        )
+        
+        total_batches = len(loader_cifar)
+        print(f"正在扫描 CIFAR-10 训练集，共计 {len(loader_cifar.dataset)} 张图片...")
+        
+        has_error = False
+        
+        # 遍历整个数据集
+        for batch_idx, x in enumerate(tqdm(loader_cifar, desc="扫描进度")):
+            # torch.isfinite 检查是否存在 NaN (非数字) 或 Inf (无穷大)
+            # 如果 x 里面哪怕有一个数字是 NaN/Inf，isfinite().all() 就会返回 False
+            if not torch.isfinite(x).all():
+                print(f"\n❌ 警告！在第 {batch_idx} 个 Batch 中发现了 NaN/Inf 异常值！")
+                has_error = True
+                break
+                
+        if not has_error:
+            print("\n✅ 扫描完成！CIFAR-10 数据集非常健康，没有包含任何 NaN/Inf 导致数据读取异常的样本。")
+            
+    except Exception as e:
+        print(f"\n❌ 扫描过程中发生错误: {e}")
