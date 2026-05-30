@@ -162,11 +162,24 @@ def p_sample(
         - 注意 t=0 时**不加随机扰动**（最后一步无需采样）
     """
     # >>> 在这里写你的代码（约 8-12 行） <<<
-    sqrt_recip_alpha = extract(schedule.sqrt_recip_alpha, t, xt.shape)
-    betas = extract(schedule.betas, t, xt.shape)
-    sqrt_one_minus_alpha_bar = extract(schedule.sqrt_one_minus_alpha_bar, t, xt.shape)
+    # sqrt_recip_alpha = extract(schedule.sqrt_recip_alpha, t, xt.shape)
+    # betas = extract(schedule.betas, t, xt.shape)
+    # sqrt_one_minus_alpha_bar = extract(schedule.sqrt_one_minus_alpha_bar, t, xt.shape)
+    # pred_noise = model(xt, t)
+    # mu = sqrt_recip_alpha * (xt - betas * pred_noise / sqrt_one_minus_alpha_bar)
+
+    # 不再直接用 pred_noise 算 mu，而是显式求出 x0 并进行 clamp
     pred_noise = model(xt, t)
-    mu = sqrt_recip_alpha * (xt - betas * pred_noise / sqrt_one_minus_alpha_bar)
+    # 1. 估算原始图像 x0
+    pred_x0 = predict_x0_from_noise(xt, t, pred_noise, schedule)
+    # 2. 核心操作：裁剪到 [-1, 1] 防止数值爆炸（消除纯色块的关键）
+    pred_x0.clamp_(-1.0, 1.0)
+    # 3. 使用后验均值公式（posterior mean）结合截断后的 x0 和当前的 xt 来计算 mu
+    coef1 = extract(schedule.posterior_mean_coef1, t, xt.shape)
+    coef2 = extract(schedule.posterior_mean_coef2, t, xt.shape)
+    mu = coef1 * pred_x0 + coef2 * xt
+    # --------------------------------------------
+
     posterior_variance = extract(schedule.posterior_variance, t, xt.shape)
     noise = torch.randn_like(xt)
     nonzero_mask = (t > 0).float().view(-1, *([1] * (len(xt.shape) - 1))) 
